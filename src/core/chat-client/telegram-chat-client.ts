@@ -19,7 +19,7 @@ function getKeyboardWithButtons(buttons: string[]) {
     newline: false,
   };
   const keyboard = new Keyboard(keyboardOptions);
-  buttons.map((text) => keyboard.add(text));
+  buttons.map((text) => keyboard.make(text));
   return keyboard;
 }
 
