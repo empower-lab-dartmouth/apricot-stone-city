@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "tsc",
-    "gcp-build": "tsc",
+    "gcp-build": "tsc -p .",
+    "deploy": "gcloud app deploy",
     "watch-node": "nodemon build/index.js",
     "watch-ts": "tsc -w",
-    "deploy": "git add . && git commit -m Heroku && git push heroku master",
     "start:dev": "nodemon --inspect src/index.ts",
     "start": "node build/index.js",
     "lint": "eslint . --ext .ts",
