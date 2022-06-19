@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "tsc",
+    "gcp-build": "tsc",
     "watch-node": "nodemon build/index.js",
     "watch-ts": "tsc -w",
     "deploy": "git add . && git commit -m Heroku && git push heroku master",
