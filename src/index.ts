@@ -3,6 +3,13 @@ import { telegramClient } from './core/chat-client/telegram-chat-client'
 import log from './core/util/logging'
 import { convoManagerConstructor } from './core/convo-engine/convo-manager'
 import storytellerContentConfigurations from './storyteller-config'
+import express from 'express';
+
+const app = express();
+
+app.listen(8080, () =>
+  console.log('Example app listening on port 8080!'),
+);
 
 dotenv.config()
 
