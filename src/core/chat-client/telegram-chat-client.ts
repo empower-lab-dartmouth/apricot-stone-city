@@ -25,13 +25,13 @@ function getKeyboardWithButtons(buttons: string[]) {
 
 function renderWithContext(ctx: TelegrafContext): RenderInChat {
   return {
-    replyText: (text, buttons) => {
-      log.debug('reply in chat with the text message: ', text);
-      ctx.replyWithHTML(text, getKeyboardWithButtons(buttons).draw());
+    replyText: async (text, buttons) => {
+      await log.debug('reply in chat with the text message: ', text);
+      await ctx.replyWithHTML(text, getKeyboardWithButtons(buttons).draw());
     },
-    replyImage: (src, buttons) => {
-      log.debug('reply in chat with the image: ', src);
-      ctx.replyWithPhoto(
+    replyImage: async (src, buttons) => {
+      await log.debug('reply in chat with the image: ', src);
+      await ctx.replyWithPhoto(
         { url: `${src}`, filename: 'photo.jpg' },
         getKeyboardWithButtons(buttons).draw(),
       );
@@ -56,18 +56,19 @@ export const telegramClient: ChatClientConstructor = (apiKey) => {
         initStateStores,
       );
 
-      bot.on('text', (ctx: any) => {
+      bot.on('text', async (ctx: any) => {
         log.debug('received user input');
-        const renderFunctions: RenderInChat = renderWithContext(ctx);
+        const renderFunctions: RenderInChat = await renderWithContext(ctx);
+        // const renderFunctions = render(ctx);
         convoManager.respondToUserInput(
           ctx.from.id,
           ctx.message.text,
           renderFunctions,
         );
       });
-      bot.on('message', (ctx: { reply: (arg0: string) => any }) => {
+      bot.on('message', async (ctx: { reply: (arg0: string) => any }) => {
         log.debug('received user input as message other than text');
-        ctx.reply('Only text messages please');
+        await ctx.reply('Only text messages please');
       });
       log.debug('telegram client is configured and waiting for messages.');
       bot.launch();

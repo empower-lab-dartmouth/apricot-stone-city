@@ -45,14 +45,14 @@ const displayConvoNode: (
     chatRenderFunctions,
     keyboardButtons,
     stateInstance
-) => convoNode => {
+) => async convoNode => {
     switch (convoNode.__TYPE__) {
         case 'image-node':
             const errorHandler = onError(
                 `Error evaluating image source`,
                 'SERVER ERROR'
             )
-            chatRenderFunctions.replyImage(
+            await chatRenderFunctions.replyImage(
                 evaluateFilePath(convoNode.src, errorHandler, stateInstance),
                 keyboardButtons
             )
@@ -64,7 +64,7 @@ const displayConvoNode: (
                 stateInstance
             )
             log.debug(`send reply`, replyText)
-            chatRenderFunctions.replyText(replyText, keyboardButtons)
+            await chatRenderFunctions.replyText(replyText, keyboardButtons)
             break
         default:
             log.trace('Error! This should be unreachable code')
@@ -215,7 +215,7 @@ export const convoManagerConstructor: ConvoManagerConstructor = (
 ) => {
     const cache: Record<string, StateManager> = {}
     return {
-        respondToUserInput: (userId, userInput, chatRenderFunctions) => {
+        respondToUserInput: async (userId, userInput, chatRenderFunctions) => {
             // init state manager or pull from cache
             // init navigation manager or pull from cache
             const historyManager: HistoryManager = {}
@@ -270,7 +270,7 @@ export const convoManagerConstructor: ConvoManagerConstructor = (
                         currentConvoSegment.choices
                     )
                     const defaultResponse = `Sorry, I don't recognize your response of <i>${userInput}</i> right now. Try responding with one of the buttons in the chat keyboard.`
-                    chatRenderFunctions.replyText(
+                    await chatRenderFunctions.replyText(
                         defaultResponse,
                         keyboardButtons
                     )
