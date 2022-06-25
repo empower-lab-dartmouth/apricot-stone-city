@@ -27,6 +27,11 @@ var telegram_chat_client_1 = require("./core/chat-client/telegram-chat-client");
 var logging_1 = __importDefault(require("./core/util/logging"));
 var convo_manager_1 = require("./core/convo-engine/convo-manager");
 var storyteller_config_1 = __importDefault(require("./storyteller-config"));
+var express_1 = __importDefault(require("express"));
+var app = express_1.default();
+app.listen(8080, function () {
+    return console.log('Example app listening on port 8080!');
+});
 dotenv.config();
 var apiKey = process.env.BOT_TOKEN;
 if (apiKey === undefined) {

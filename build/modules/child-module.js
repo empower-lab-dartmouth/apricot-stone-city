@@ -32,7 +32,7 @@ exports.nestedModule = make_1.default.module({
                 {
                     type: 'text',
                     text: 'it has two parts',
-                },
+                }
             ],
             choices: [
                 {
@@ -57,6 +57,10 @@ exports.nestedModule = make_1.default.module({
                     type: 'text',
                     text: 'this is the other child node',
                 },
+                {
+                    type: 'text',
+                    text: 'second sentence',
+                }
             ],
             choices: [restartChoice],
         },

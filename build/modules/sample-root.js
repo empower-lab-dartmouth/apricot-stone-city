@@ -138,7 +138,7 @@ exports.root = make_1.default.module({
             ],
             choices: [
                 {
-                    text: '/goBackToStart',
+                    text: '/goToStart',
                     logic: [
                         {
                             do: [

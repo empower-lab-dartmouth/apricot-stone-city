@@ -34,5 +34,5 @@ tmp
 .DS_Store
 Thumbs.db
 
-ignore yarn.lock
-# package-lock.json
+# ignore yarn.lock
+package-lock.json
