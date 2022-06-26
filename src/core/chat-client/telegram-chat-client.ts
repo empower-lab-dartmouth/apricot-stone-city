@@ -55,11 +55,10 @@ export const telegramClient: ChatClientConstructor = (apiKey) => {
         storytellerConfig.rootModule,
         initStateStores,
       );
-
+      
       bot.on('text', async (ctx: any) => {
         log.debug('received user input');
         const renderFunctions: RenderInChat = await renderWithContext(ctx);
-        // const renderFunctions = render(ctx);
         convoManager.respondToUserInput(
           ctx.from.id,
           ctx.message.text,
