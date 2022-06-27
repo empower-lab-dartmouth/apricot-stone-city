@@ -5,6 +5,5 @@ steps:
 - name: node:10.15.1
   entrypoint: npm
   args: ["run", "create-env"]
-  env:
-    - 'BOT_TOKEN=${_BOT_TOKEN}'
+  env: 'BOT_TOKEN=${_BOT_TOKEN}'
 timeout: '1600s'
