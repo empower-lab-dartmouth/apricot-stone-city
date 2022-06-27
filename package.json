@@ -6,6 +6,7 @@
   "scripts": {
     "prepare": "npm run gcp-build",
     "pretest": "npm run gcp-build",
+    "create-env": "printenv > .env",
     "postinstall": "tsc",
     "gcp-build": "tsc -p .",
     "deploy": "gcloud functions deploy",

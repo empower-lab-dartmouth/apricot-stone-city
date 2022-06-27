@@ -5,6 +5,7 @@ import { convoManagerConstructor } from './core/convo-engine/convo-manager'
 import storytellerContentConfigurations from './storyteller-config'
 
 dotenv.config()
+
 const apiKey = process.env.BOT_TOKEN
 
 function main() {
