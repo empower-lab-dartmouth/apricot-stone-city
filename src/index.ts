@@ -3,9 +3,18 @@ import { telegramClient } from './core/chat-client/telegram-chat-client'
 import log from './core/util/logging'
 import { convoManagerConstructor } from './core/convo-engine/convo-manager'
 import storytellerContentConfigurations from './storyteller-config'
+import express from 'express'
 
 dotenv.config()
 const apiKey = process.env.BOT_TOKEN
+const app = express();
+
+// handler for app engine
+app.get('/_ah/warmup', (req, res) => {
+    // Handle warmup logic. Initiate db connection, etc.
+});
+
+app.listen(8080);
 
 function main() {
   if (apiKey === undefined) {
