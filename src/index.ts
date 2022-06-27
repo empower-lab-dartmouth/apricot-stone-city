@@ -12,6 +12,7 @@ const app = express();
 // handler for app engine
 app.get('/_ah/warmup', (req, res) => {
     // Handle warmup logic. Initiate db connection, etc.
+    main()
 });
 
 app.listen(8080);
