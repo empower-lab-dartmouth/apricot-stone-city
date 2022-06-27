@@ -5,35 +5,22 @@ import log from '../util/logging';
 import { Stores } from '../models/state/state';
 import { State } from '../../state/state-config';
 
-const { Keyboard } = require('telegram-keyboard');
 const Telegraf = require('telegraf');
 const session = require('telegraf/session');
 
 type TelegrafContext = any
 type TelegrafBot = any
 
-function getKeyboardWithButtons(buttons: string[]) {
-  const keyboardOptions = {
-    inline: false,
-    duplicates: false,
-    newline: false,
-  };
-  const keyboard = new Keyboard(keyboardOptions);
-  buttons.map((text) => keyboard.make(text));
-  return keyboard;
-}
-
 function renderWithContext(ctx: TelegrafContext): RenderInChat {
   return {
     replyText: (text, buttons) => {
       log.debug('reply in chat with the text message: ', text);
-      ctx.replyWithHTML(text, getKeyboardWithButtons(buttons).draw());
+      ctx.replyWithHTML(text);
     },
     replyImage: (src, buttons) => {
       log.debug('reply in chat with the image: ', src);
       ctx.replyWithPhoto(
-        { url: `${src}`, filename: 'photo.jpg' },
-        getKeyboardWithButtons(buttons).draw(),
+        { url: `${src}`, filename: 'photo.jpg' }
       );
     },
   };
