@@ -10,7 +10,28 @@ To set up this repo, open a terminal and navigate to the directory where you wou
 
 ```
 git clone https://github.com/empower-lab-dartmouth/apricot-stone-city.git
-cd storyteller
+```
+Now, enter your username. DON'T enter your password, if you do you will see an error like this:
+
+```
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/empower-lab-dartmouth/apricot-stone-city.git/'
+```
+
+Instead of entering your password, create an access token by following the instructions here: 
+https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+
+You can give this access token all the permissions available. Now, tell github who you are by running (but with your own name and email)
+
+```
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+```
+
+Now, do the following:
+```
+cd apricot-stone-city
 npm install
 cp .env.example .env
 ```
