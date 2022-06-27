@@ -22,7 +22,7 @@ fatal: Authentication failed for 'https://github.com/empower-lab-dartmouth/apric
 Instead of entering your password, create an access token by following the instructions here: 
 https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
 
-You can give this access token all the permissions available. Now, tell github who you are by running (but with your own name and email)
+You can give this access token all the permissions available(You should check all the boxes). Now, tell github who you are by running (but with your own name and email)
 
 ```
 git config --global user.email "you@example.com"
