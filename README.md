@@ -1,4 +1,4 @@
-# Storyteller
+# Apricot Stone City Storyteller
 
 This is an example from Dylan and Sophia's TUMO workshop on designing an interactive storytelling chatbot. All the code here was written during and for this course.
 
@@ -9,13 +9,60 @@ I recommend checking out the example I have in the `modules` folder to get a sen
 To set up this repo, open a terminal and navigate to the directory where you would like to clone *Storyteller*, then run the following commands (you should be able to just copy and paste these):
 
 ```
-git clone https://github.com/dylanedwardmoore/storyteller.git
-cd storyteller
+git clone https://github.com/empower-lab-dartmouth/apricot-stone-city.git
+```
+Now, enter your username. DON'T enter your password, if you do you will see an error like this:
+
+```
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/empower-lab-dartmouth/apricot-stone-city.git/'
+```
+
+Instead of entering your password, create an access token by following the instructions here: 
+https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+
+You can give this access token all the permissions available(You should check all the boxes). Now, tell github who you are by running (but with your own name and email)
+
+```
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+```
+
+Now, do the following:
+```
+cd apricot-stone-city
 npm install
 cp .env.example .env
 ```
 
 Now, open the *Storyteller* project in vscode and open the `.env` file, you should update the API key here to be your Telegram API key. You can set that up by following the [instructions here](https://www.siteguarding.com/en/how-to-get-telegram-bot-api-token). 
+
+
+## How to push your local changes
+After verifying that your changes are working and that the local chatbot server is not crashing (very important :) your friends will thank you for not breaking production), you can push your changes to remote by doing the following:
+
+```
+git status
+```
+this will show you a list of the files that were changed. Please do this to verify that no unexpected files show up as being changed.
+
+```
+git pull
+```
+This will pull changes from remote. You should ALWAYS pull changes before pushing. The idea here is that while you were working other people may have pushed changes that—when mixed with your code changes—could break things. If you don't pull first, you could be creating errors. So, use this command. This may result in a merge conflict, don't worry, that just means that your changes conflict with other changes that were made while you were working. To fix that, just go through and resolve the merge conflict line by line yourself and verify—by running locally— that everything looks good to go. Then, once you're confident. Run:
+
+```
+git add .
+```
+
+this adds all the files you've changed to the list of changes to be committed. Then do the following (with your own commit message):
+
+```
+git commit -m "Your commit message here"
+git push
+```
+That should do the tick. You can check https://github.com/empower-lab-dartmouth/apricot-stone-city to verify that your changes were committed.
 
 ## Testing locally
 
@@ -27,30 +74,6 @@ npm run start:dev
 
 Now you should be able to chat with your bot :) try sending it a message...
 
-
-## Deploying to Heroku
-
-Once you have the local server running the way you'd like it to, you can use Heroku to deploy and have it run remotely. That way you can use your chatbot without having to have your computer running the node app all the time. To get setup, first sign up for a Heroku account and add the command line tools, as [described here](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up)
-
-Now, from within the `storyteller` project directory that was created when you cloned this repository, create a heroku project. You can do this using the command (you can change "storyteller" below to anything you like): 
-
-`heroku create storyteller`
-
-You can re-deploy and restart your server at any time by editing any file (so that there are changes to deploy) and then running: 
-
-`npm run deploy`
-
-To just restart your app, you can also do:
-
-`heroku restart`
-
-This will deploy your master branch to heroku. If anything breaks and you need to restart, try restarting or redeploying. Also, you can see the logs on your server by running:
-
-`heroku logs`
-
-Check there to see what's up if anything breaks.
-
-Finally, to make it all work, you'll need to add your API token to the newly created project. This is basically the same steps you took for editing the .env file, but for the remote server. To accomplish this you should follow the [steps here](https://devcenter.heroku.com/articles/config-vars#managing-config-vars) for adding a config var to your newly created heroku project. Set the name of the var to `BOT_TOKEN` and the value to whatever your token is. Your config vars should match what you have locally in your .env file, so if you use other vars there, update your config vars in heroku accordingly. When you have this set up, you might need to redeploy to apply the changes. After that, you should be good to go! 
 
 ## Debugging
 
