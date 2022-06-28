@@ -4,9 +4,10 @@ import RenderInChat from '../models/chat-client/render-interface'
 import log from '../util/logging'
 import { Stores } from '../models/state/state'
 import { State } from '../../state/state-config'
+const { Keyboard } = require('telegram-keyboard');
 
-const Telegraf = require('telegraf')
-const session = require('telegraf/session')
+const Telegraf = require('telegraf');
+const session = require('telegraf/session');
 
 type TelegrafContext = any
 type TelegrafBot = any
@@ -15,11 +16,13 @@ function renderWithContext(ctx: TelegrafContext): RenderInChat {
     return {
         replyText: (text, buttons) => {
             log.debug('reply in chat with the text message: ', text)
-            ctx.replyWithHTML(text)
+            const keyboard = Keyboard.make(buttons);
+            ctx.replyWithHTML(text, keyboard.reply());
         },
         replyImage: (src, buttons) => {
-            log.debug('reply in chat with the image: ', src)
-            ctx.replyWithPhoto({ url: `${src}`, filename: 'photo.jpg' })
+            log.debug('reply in chat with the image: ', src);
+            const keyboard = Keyboard.make(buttons);
+            ctx.replyWithPhoto({ url: `${src}`, filename: 'photo.jpg' }, keyboard.reply());
         },
     }
 }
