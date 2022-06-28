@@ -12,19 +12,16 @@ type TelegrafContext = any
 type TelegrafBot = any
 
 function renderWithContext(ctx: TelegrafContext): RenderInChat {
-return {
-    replyText: async (text, buttons) => {
-      await log.debug('reply in chat with the text message: ', text);
-      await ctx.replyWithHTML(text, getKeyboardWithButtons(buttons).draw());
-    },
-    replyImage: async (src, buttons) => {
-      await log.debug('reply in chat with the image: ', src);
-      await ctx.replyWithPhoto(
-        { url: `${src}`, filename: 'photo.jpg' },
-        getKeyboardWithButtons(buttons).draw(),
-      );
-    },
-  };
+    return {
+        replyText: (text, buttons) => {
+            log.debug('reply in chat with the text message: ', text)
+            ctx.replyWithHTML(text)
+        },
+        replyImage: (src, buttons) => {
+            log.debug('reply in chat with the image: ', src)
+            ctx.replyWithPhoto({ url: `${src}`, filename: 'photo.jpg' })
+        },
+    }
 }
 
 export const telegramClient: ChatClientConstructor = apiKey => {
@@ -37,28 +34,28 @@ export const telegramClient: ChatClientConstructor = apiKey => {
                 variables: storytellerConfig.initialState as State,
                 currentConvoSegmentPath:
                     storytellerConfig.startingConvoSegmentPath,
-      };
+            }
 
-      const convoManager: ConvoManager = convoManagerConstructor(
-        storytellerConfig.rootModule,
-        initStateStores,
-      );
-      
-      bot.on('text', async (ctx: any) => {
-        log.debug('received user input');
-        const renderFunctions: RenderInChat = await renderWithContext(ctx);
-        convoManager.respondToUserInput(
-          ctx.from.id,
-          ctx.message.text,
-          renderFunctions,
-        );
-      });
-      bot.on('message', async (ctx: { reply: (arg0: string) => any }) => {
-        log.debug('received user input as message other than text');
-        await ctx.reply('Only text messages please');
-      });
-      log.debug('telegram client is configured and waiting for messages.');
-      bot.launch();
-    },
-  };
-};
+            const convoManager: ConvoManager = convoManagerConstructor(
+                storytellerConfig.rootModule,
+                initStateStores
+            )
+
+            bot.on('text', (ctx: any) => {
+                log.debug('received user input')
+                const renderFunctions: RenderInChat = renderWithContext(ctx)
+                convoManager.respondToUserInput(
+                    ctx.from.id,
+                    ctx.message.text,
+                    renderFunctions
+                )
+            })
+            bot.on('message', (ctx: { reply: (arg0: string) => any }) => {
+                log.debug('received user input as message other than text')
+                ctx.reply('Only text messages please')
+            })
+            log.debug('telegram client is configured and waiting for messages.')
+            bot.launch()
+        },
+    }
+}
