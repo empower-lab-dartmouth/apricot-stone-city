@@ -17,10 +17,10 @@ tmp
 build
 build/**/*
 
-.vscode
+# .vscode
 
 # API keys and secrets
-.env
+# .env
 
 # Dependency directory
 node_modules
@@ -35,4 +35,4 @@ bower_components
 Thumbs.db
 
 # ignore yarn.lock
-package-lock.json
+# package-lock.json

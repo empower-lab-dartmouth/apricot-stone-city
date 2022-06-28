@@ -135,7 +135,7 @@ export const root = make.module({
             ],
             choices: [
                 {
-                    text: '/goBackToStart',
+                    text: '/goToStart',
                     logic: [
                         {
                             do: [
