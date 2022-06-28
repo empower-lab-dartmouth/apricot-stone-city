@@ -79,4 +79,28 @@ Now you should be able to chat with your bot :) try sending it a message...
 
 Since things always break :) here's some additional notes that might be useful:
 
-If there are any errors, they should show up in the heroku logs. You might run into an issue with heroku timing out on the free plan, there are some [hacky ways around this without paying](https://medium.com/better-programming/keeping-my-heroku-app-alive-b19f3a8c3a82) but I haven't dug too much into it yet. Also of note is [heroku's restart policy if a crash is encountered](https://stackoverflow.com/questions/19265728/does-heroku-restart-nodejs-server-if-application-crashes#:~:text=Heroku's%20dyno%20restart%20policy%20is,cool%2Doff%20of%20ten%20minutes.)
+### Port is blocked
+If you get the error message:
+```
+  Starting inspector on 127.0.0.1:9229 failed: address already in use
+[nodemon] app crashed - waiting for file changes before starting...
+```
+That means some other process is already using the port you are trying to use. To fix this, you need to find the process id (also called PID) of the process that is using that port and kill that process. You can find the process id by doing the following:
+```
+lsof -i :<PORT NUMBER>
+```
+
+That should print out something like:
+```
+COMMAND  PID        USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+node    9959 learninglab   27u  IPv4 0xf7cc48ff3923c53d      0t0  TCP localhost:9229 (LISTEN)
+```
+In the example above, the PID you want is 9959. Then you can use this PID to kill the process by running the following with your PID:
+```
+kill -9 <PROCCESS ID (PID)>
+```
+You can check that this worked by running 
+```
+lsof -i :<PORT NUMBER>
+```
+again and verifying that no processes are using that port. After that, you should be good to go. You can try running your app again.
