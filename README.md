@@ -57,6 +57,7 @@ An easy way to resolve a merge conflict is to literally copy all of your code ch
 
 ```
 git reset --hard origin/master
+git pull
 ```
 
 After running this, add your code changes back as an addition to most up-to-date remote code, make sure you're using your local BOT_TOKEN and test the bot again. Does it work?
