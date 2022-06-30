@@ -35,6 +35,19 @@ const root = make.module({
           ],
         },
         {
+          text: 'toughest nut',
+          logic: [
+            {
+              do: [
+                {
+                  type: 'goto',
+                  path: ['root', 'carol-arrives-at-ASC', 'toughest-nut-in-town', 'walking-under-the-rain'],
+                },
+              ],
+            },
+          ],
+        },
+        {
           text: 'updateCounter',
           logic: [
             {
