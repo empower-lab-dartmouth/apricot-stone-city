@@ -50,18 +50,41 @@ this will show you a list of the files that were changed. Please do this to veri
 ```
 git pull
 ```
-This will pull changes from remote. You should ALWAYS pull changes before pushing. The idea here is that while you were working other people may have pushed changes that—when mixed with your code changes—could break things. If you don't pull first, you could be creating errors. So, use this command. This may result in a merge conflict, don't worry, that just means that your changes conflict with other changes that were made while you were working. To fix that, just go through and resolve the merge conflict line by line yourself and verify—by running locally— that everything looks good to go. Then, once you're confident. Run:
+This will pull changes from remote. You should ALWAYS pull changes before pushing. The idea here is that while you were working other people may have pushed changes that—when mixed with your code changes—could break things. If you don't pull first, you could be creating errors. So, use this command. This may result in a merge conflict, don't worry, that just means that your changes conflict with other changes that were made while you were working. To fix that, just go through and resolve the merge conflict line by line yourself and verify—by running locally— that everything looks good to go. 
+
+### Fixing a merge conflict
+An easy way to resolve a merge conflict is to literally copy all of your code changes onto a notepad, then run this command, which will OVERWRITE your local changes with the most recent changes on remote. NOTE!! this will DELETE all your changes!!! Please copy your changes first :) don't lose your work!
+
+```
+git reset --hard origin/master
+```
+
+After running this, add your code changes back as an addition to most up-to-date remote code, make sure you're using your local BOT_TOKEN and test the bot again. Does it work?
+
+
+Then, once you're confident. Run:
 
 ```
 git add .
 ```
 
-this adds all the files you've changed to the list of changes to be committed. Then do the following (with your own commit message):
+this adds all the files you've changed to the list of changes to be committed. Make sure you're not pushing your BOT_tOKEN in .env to remote by running:
+
+```
+git status
+```
+Do you see .env? That means you're preparing to push local changes to the `.env` file. That's probably bad. If so, run:
+
+```
+git revert .env
+```
+If you see any other files that look like they don't belong in your list of changes, you can also revert those. Then do the following (with your own commit message):
 
 ```
 git commit -m "Your commit message here"
 git push
 ```
+
 That should do the tick. You can check https://github.com/empower-lab-dartmouth/apricot-stone-city to verify that your changes were committed.
 
 ## Testing locally
