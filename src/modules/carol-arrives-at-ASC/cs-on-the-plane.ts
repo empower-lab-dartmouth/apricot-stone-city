@@ -469,19 +469,15 @@ const onThePlane = make.module({
           text: `As soon as she can, Carol rushes off the plane. She's starting to get excited about exploring this unknown city. Apricot Stone City... how intriguing... Once she's off the plane she pushes past the man with the two ties. He has a concentrated look on his face.
           `,
         },
-        {
-          type: 'text',
-          text: `END!`,
-        },
       ],
-      choices: [{
-        text: "Go to start",
+      choices: [{ 
+        text: "Grab your bag",
         logic: [
           {
             do: [
               {
                 type: 'goto',
-                path: ['opening'],
+                path: ['root', 'carol-arrives-at-ASC', 'missing-bags', 'miss-bag'],
               },
             ],
           },
@@ -497,19 +493,16 @@ const onThePlane = make.module({
 
           `,
         },
-        {
-          type: 'text',
-          text: `END!`,
-        },
+      
       ],
       choices: [{ 
-        text: "Go to start",
+        text: "Grab your bag",
         logic: [
           {
             do: [
               {
                 type: 'goto',
-                path: ['opening'],
+                path: ['root', 'carol-arrives-at-ASC', 'missing-bags', 'miss-bag'],
               },
             ],
           },
