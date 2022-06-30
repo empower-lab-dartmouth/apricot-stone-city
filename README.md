@@ -52,7 +52,7 @@ git pull
 ```
 This will pull changes from remote. You should ALWAYS pull changes before pushing. The idea here is that while you were working other people may have pushed changes that—when mixed with your code changes—could break things. If you don't pull first, you could be creating errors. So, use this command. This may result in a merge conflict, don't worry, that just means that your changes conflict with other changes that were made while you were working. To fix that, just go through and resolve the merge conflict line by line yourself and verify—by running locally— that everything looks good to go. 
 
-### Fixing a merge conflict
+### Fixing a merge conflict when trying to push
 An easy way to resolve a merge conflict is to literally copy all of your code changes onto a notepad, then run this command, which will OVERWRITE your local changes with the most recent changes on remote. NOTE!! this will DELETE all your changes!!! Please copy your changes first :) don't lose your work!
 
 ```
@@ -61,7 +61,7 @@ git reset --hard origin/master
 
 After running this, add your code changes back as an addition to most up-to-date remote code, make sure you're using your local BOT_TOKEN and test the bot again. Does it work?
 
-
+### Pushing after fixing merge conflicts
 Then, once you're confident. Run:
 
 ```
