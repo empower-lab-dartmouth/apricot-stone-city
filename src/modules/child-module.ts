@@ -28,7 +28,7 @@ export const nestedModule = make.module({
                 {
                     type: 'text',
                     text: 'it has two parts',
-                }
+                },
             ],
             choices: [
                 {
@@ -56,7 +56,7 @@ export const nestedModule = make.module({
                 {
                     type: 'text',
                     text: 'second sentence',
-                }
+                },
             ],
             choices: [restartChoice],
         },

@@ -1,5 +1,5 @@
 import { StorytellerConfig } from './core/models/chat-client/chat-client'
-import { root } from './modules/sample-root'
+import root from './modules/sample-root'
 import { absoluteConvoSegmentPath } from './core/util/make/graph-components'
 import { initialState } from './state/state-config'
 import { runPrelanchTests } from './prelaunch-tests'
