@@ -13,11 +13,12 @@ const logEventToRemote: (event: LogToRemoteEvent) => void = async (
     const currentDate = Date()
     const eventWithEnv = {
         ...event,
+        choices: event.choices.length > 0 ? event.choices : 'free-response',
         buildEnvironment:
             process.env.BOT_TOKEN === REMOTE_BOT_TOKEN ? 'remote' : 'local',
     }
     console.log(eventWithEnv)
-    setDoc(doc(firebaseDB, EVENTS_ENV, currentDate), eventWithEnv);
+    setDoc(doc(firebaseDB, EVENTS_ENV, currentDate), eventWithEnv)
 }
 
 export default logEventToRemote
