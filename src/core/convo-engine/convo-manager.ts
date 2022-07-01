@@ -1,3 +1,6 @@
+/* eslint-disable no-lonely-if */
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable indent */
 import { ConvoManagerConstructor } from '../models/convo-engine/managers/convo-manager'
 import StateManager from '../models/state/managers/state-manager'
 import UserChoice from '../models/convo-engine/convo-graph/user-choice'
@@ -9,6 +12,7 @@ import {
     evaluateStateUpdate,
 } from '../util/util-functions'
 import log from '../util/logging'
+import logEventToRemote from '../../state/remote-logging';
 import {
     ConvoLogic,
     ConvoLogicAction,
@@ -25,6 +29,23 @@ import {
 } from '../models/state/state'
 import ConvoModule from '../models/convo-engine/convo-graph/convo-module'
 
+const formatConvoChoice = (choices: UserChoice[], userState: GeneralizedStateInstance) => {
+    // eslint-disable-next-line no-unused-vars
+    const errorHandler = (_: Error) => 'unused';
+    return choices.map((c) => evaluateText(c.text, errorHandler, userState));
+  };
+  
+  const formatContentSentToUser = (convoNodes: ConvoNode[], userState: GeneralizedStateInstance) => {
+    // eslint-disable-next-line no-unused-vars
+    const errorHandler = (_: Error) => 'unused';
+    return convoNodes.map((c) => {
+      if (c.__TYPE__ === 'image-node') {
+        return `image [src: ${c.src}]`;
+      }
+      return evaluateText(c.text, errorHandler, userState);
+    });
+  };
+  
 const choiceMatchesUserInput: (
     userInput: string,
     stateInstance: GeneralizedStateInstance
@@ -105,6 +126,23 @@ const executeAction: (params: ExecuteActionParams) => void = params => {
         case 'start-convo-segment':
             // TODO: Add support for pre convo logic
             log.debug(`Set convo path to `, action.path)
+            logEventToRemote({
+                type: 'goto-segment',
+                startingPath: stateManager.getCurrentConvoSegmentPath(),
+                endingPath: stateManager.getAbsolutePath(action.path),
+                userId: stateManager.getState().userId as string,
+                choices: formatConvoChoice(
+                    stateManager.getCurrentConvoSegment().choices, stateManager.getState()
+                    ),
+                userStateBeforeLogic: stateManager.getState(),
+                contentReceivedFromUser: stateManager.getState().lastTextMessage,
+                timestamp: new Date(),
+                username: stateManager.getState().username as string,
+                userEmail: stateManager.getState().userEmail as string,
+                contentSentToUser: formatContentSentToUser(stateManager.getCurrentConvoSegment()
+                    .convoNodes,
+                  stateManager.getState()),
+              });
             stateManager.setCurrentConvoSegmentPath(action.path)
             const convoSegment = stateManager.getCurrentConvoSegment()
             const keyboardButtons = keyboardButtonsFromChoices(
@@ -130,6 +168,19 @@ const executeAction: (params: ExecuteActionParams) => void = params => {
                 errorHandler,
                 stateManager.getState()
             )
+            logEventToRemote({
+                type: 'update-state',
+                startingPath: stateManager.getCurrentConvoSegmentPath(),
+                userId: stateManager.getState().userId as string,
+                choices: formatConvoChoice(stateManager.getCurrentConvoSegment().choices,
+                  stateManager.getState()),
+                userStateBeforeLogic: stateManager.getState(),
+                contentReceivedFromUser: stateManager.getState().lastTextMessage,
+                stateUpdate: evaluatedStateUpdate,
+                username: stateManager.getState().username as string,
+                userEmail: stateManager.getState().userEmail as string,
+                timestamp: new Date(),
+              });
             stateManager.updateState(evaluatedStateUpdate)
             break
         default:
@@ -268,8 +319,21 @@ export const convoManagerConstructor: ConvoManagerConstructor = (
                     const keyboardButtons = keyboardButtonsFromChoices(
                         stateManager.getState(),
                         currentConvoSegment.choices
-                    )
+                    );
                     const defaultResponse = `Sorry, I don't recognize your response of <i>${userInput}</i> right now. Try responding with one of the buttons in the chat keyboard.`
+                    logEventToRemote({
+                        type: 'unrecognized-response',
+                        startingPath: stateManager.getCurrentConvoSegmentPath(),
+                        userId: stateManager.getState().userId as string,
+                        choices: formatConvoChoice(
+                            currentConvoSegment.choices, stateManager.getState()
+                            ),
+                        userStateBeforeLogic: stateManager.getState(),
+                        contentReceivedFromUser: stateManager.getState().lastTextMessage,
+                        timestamp: new Date(),
+                        username: stateManager.getState().username as string,
+                        userEmail: stateManager.getState().userEmail as string,
+                      });
                     await chatRenderFunctions.replyText(
                         defaultResponse,
                         keyboardButtons
