@@ -130,7 +130,7 @@ export const safelyGetConvoSegment: (
             parentModule: ConvoModule,
             nextChildId: ConvoModuleId
         ) => ConvoModule = (parentModule, nextChildId) => {
-            return parentModule.submodules[getNominalValue(nextChildId)]
+            return parentModule.submodules[getNominalValue(nextChildId) as any]
         }
         const nestedModule = absolutePathExcludingRootId.parentModules!.reduce(
             reducer,

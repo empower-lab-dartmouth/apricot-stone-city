@@ -48,6 +48,123 @@ const root = make.module({
           ],
         },
         {
+          text: 'A woman stops her car',
+          logic: [
+            {
+              do: [
+                {
+                  type: 'goto',
+                  path: ['root', 'carol-arrives-at-ASC', 'a-woman-stops-her-car', 'introduction'],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          text: 'Arrival to Cascade',
+          logic: [
+            {
+              do: [
+                {
+                  type: 'goto',
+                  path: ['root', 'carol-arrives-at-ASC', 'carol-arrives-at-cascade', 'intro'],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          text: 'Warm house',
+          logic: [
+            {
+              do: [
+                {
+                  type: 'goto',
+                  path: ['root', 'carol-arrives-at-ASC', 'at-the-warm-home', 'around-the-table'],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          text: 'Goes to bed',
+          logic: [
+            {
+              do: [
+                {
+                  type: 'goto',
+                  path: ['root', 'carol-arrives-at-ASC', 'carol-goes-to-bed', 'carol-enters-the-bedroom'],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          text: 'Stops a taxi',
+          logic: [
+            {
+              do: [
+                {
+                  type: 'goto',
+                  path: ['root', 'carol-arrives-at-ASC', 'stop-taxi', 'taxi'],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          text: 'Dinner',
+          logic: [
+            {
+              do: [
+                {
+                  type: 'goto',
+                  path: ['root', 'carol-arrives-at-ASC', 'having-dinner', 'arrive-to-the-house'],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          text: 'Exploring ATC',
+          logic: [
+            {
+              do: [
+                {
+                  type: 'goto',
+                  path: ['root', 'carol-arrives-at-ASC', 'walking', 'walkingUnderRain'],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          text: 'Lost passport',
+          logic: [
+            {
+              do: [
+                {
+                  type: 'goto',
+                  path: ['root', 'carol-arrives-at-ASC', 'Lost-pasport', 'miss-pasport'],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          text: 'Solemn walk',
+          logic: [
+            {
+              do: [
+                {
+                  type: 'goto',
+                  path: ['root', 'carol-arrives-at-ASC', 'solemn-walk-in-the-rain', 'solemn-walk'],
+                },
+              ],
+            },
+          ],
+        },  
+        {
           text: 'updateCounter',
           logic: [
             {
