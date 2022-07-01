@@ -1,18 +1,22 @@
-import { JSONValue, PlainObject, Id } from '../common/common-types'
-import { ConvoSegmentPath } from '../convo-engine/convo-graph/convo-path'
-import { EventRecord, EventRecordId } from './event-record'
+import { JSONValue, PlainObject, Id } from '../common/common-types';
+import { ConvoSegmentPath } from '../convo-engine/convo-graph/convo-path';
+import { EventRecord, EventRecordId } from './event-record';
 
 export type StateVariable = JSONValue
 
 export type UserInfo = {
     lastTextMessage: string
+    username: string,
+    userEmail: string,
     userId: string
 }
 
 export const defaultUserInfo: UserInfo = {
-    lastTextMessage: '',
-    userId: '',
-}
+  lastTextMessage: '',
+  username: 'not-set',
+  userEmail: 'not-set',
+  userId: '',
+};
 
 /*
  * To make the core agnostic from content,
