@@ -6,6 +6,7 @@ import { StateVariable } from './state'
 
 type GotoSegmentRemoteLoggingEvent = {
     type: 'goto-segment'
+    botToken?: string
     buildEnvironment?: 'local' | 'remote'
     startingPath: AbsoluteConvoSegmentPath //  before receiving user input
     endingPath: AbsoluteConvoSegmentPath // after receiving user input
@@ -28,6 +29,7 @@ type UpdateStateRemoteLoggingEvent = {
     contentReceivedFromUser: JSONValue
     userStateBeforeLogic: PlainObject<StateVariable>
     stateUpdate: PlainObject<StateVariable>
+    botToken?: string
     username: string
     userEmail: string
     timestamp: Date
@@ -42,6 +44,7 @@ type UnrecognizedUserResponseRemoteLoggingEvent = {
     contentReceivedFromUser: JSONValue
     userStateBeforeLogic: PlainObject<StateVariable>
     username: string
+    botToken?: string
     userEmail: string
     timestamp: Date
 }

@@ -14,6 +14,7 @@ const logEventToRemote: (event: LogToRemoteEvent) => void = async (
     const eventWithEnv = {
         ...event,
         choices: event.choices.length > 0 ? event.choices : 'free-response',
+        botToken: process.env.BOT_TOKEN,
         buildEnvironment:
             process.env.BOT_TOKEN === REMOTE_BOT_TOKEN ? 'remote' : 'local',
     }
