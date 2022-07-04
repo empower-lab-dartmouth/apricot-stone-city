@@ -58,6 +58,24 @@ const root = make.module({
                     ],
                 },
                 {
+                    text: 'Arpi invitess Carol',
+                    logic: [
+                        {
+                            do: [
+                                {
+                                    type: 'goto',
+                                    path: [
+                                        'root',
+                                        'carol-arrives-at-ASC',
+                                        'arpi-Invites-Carol',
+                                        'at-the-cascade',
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+                {
                     text: 'A woman stops her car',
                     logic: [
                         {
