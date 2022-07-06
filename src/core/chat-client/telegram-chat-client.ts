@@ -18,10 +18,10 @@ function renderWithContext(ctx: TelegrafContext): RenderInChat {
             log.debug('reply in chat with the text message: ', text)
             const keyboard = Keyboard.make(buttons)
             if (buttons.length > 0) {
-                ctx.replyWithHTML(text, keyboard.reply());
+                ctx.replyWithHTML(text, keyboard.reply())
             } else {
-                console.log("HIDING KEYBOARD");
-                ctx.replyWithHTML(text, { remove_keyboard: true });
+                console.log('HIDING KEYBOARD')
+                ctx.replyWithHTML(text, { remove_keyboard: true })
             }
         },
         replyImage: (src, buttons) => {
@@ -34,8 +34,9 @@ function renderWithContext(ctx: TelegrafContext): RenderInChat {
                 )
             } else {
                 ctx.replyWithPhoto(
-                    { url: `${src}`, filename: 'photo.jpg' }, 
-                    { remove_keyboard: true });
+                    { url: `${src}`, filename: 'photo.jpg' },
+                    { remove_keyboard: true }
+                )
             }
         },
     }

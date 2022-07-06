@@ -18,8 +18,7 @@ const missingBag = make.module({
                         "<b>She is exhausted after the flight and doesn't remember what her bag exactly looked like. She sees one that looks like her's</b>",
                 },
             ],
-            choices: [
-            ],
+            choices: [],
         },
         {
             id: 'take-it',
@@ -41,8 +40,7 @@ const missingBag = make.module({
                         'Carol starts panicking and goes to find the police and tells everything. Then the police promises they\'ll find them. Carol decides to sit and wait, she is very nervous, but then someone approaches her and says panicked "I think we got our bags wrong, I think those are mine", Carol jumps up, says "Oh my God, yes, probably, because these aren\'t mine and I can\'t find my bags". Carol gets her bags back.',
                 },
             ],
-            choices: [
-            ],
+            choices: [],
         },
     ],
 })
