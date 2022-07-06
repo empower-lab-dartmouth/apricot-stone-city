@@ -5,6 +5,7 @@ import log from '../core/util/logging'
 import carolArrivesAtASC from './carol-arrives-at-ASC/n-carol-arrives-at-ASC'
 import normanArrivesAtASC from './norman-arrives-at-ASC/n-norman-arrives-at-ASC'
 import normanLearnsKMeans from './missions/unsupervised-learning/n-k-means'
+import normanLearnsAboutTrainingData from './missions/training-data/n-training-data'
 
 const root = make.module({
     id: 'root',
@@ -13,6 +14,7 @@ const root = make.module({
         carolArrivesAtASC,
         normanArrivesAtASC,
         normanLearnsKMeans,
+        normanLearnsAboutTrainingData,
     ],
     convoSegments: [
         {
@@ -40,6 +42,24 @@ const root = make.module({
                                         'carol-arrives-at-ASC',
                                         'on-the-plane',
                                         'opening',
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+                {
+                    text: `Training Data`,
+                    logic: [
+                        {
+                            do: [
+                                {
+                                    type: 'goto',
+                                    path: [
+                                        'root',
+                                        'training-data',
+                                        'norman-arrives-at-Three-Broomsticks',
+                                        'introduction',
                                     ],
                                 },
                             ],
