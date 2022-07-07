@@ -1,6 +1,6 @@
 import make from '../../../core/util/make'
 
-const arrivalAtThreeBroomsticks  = make.module({
+const arrivalAtThreeBroomsticks = make.module({
     id: 'norman-arrives-at-Three-Broomsticks',
     submodules: [],
     convoSegments: [
@@ -30,7 +30,6 @@ const arrivalAtThreeBroomsticks  = make.module({
                         },
                     ],
                 },
-
             ],
         },
         {
@@ -55,7 +54,6 @@ const arrivalAtThreeBroomsticks  = make.module({
                         },
                     ],
                 },
-
             ],
         },
         {
@@ -103,7 +101,6 @@ const arrivalAtThreeBroomsticks  = make.module({
                         },
                     ],
                 },
-
             ],
         },
         {
@@ -132,7 +129,6 @@ const arrivalAtThreeBroomsticks  = make.module({
                         },
                     ],
                 },
-
             ],
         },
         {
@@ -159,9 +155,11 @@ const arrivalAtThreeBroomsticks  = make.module({
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['training-data',
-                                    'norman-picks-Firewhisky',
-                                    'introduction',],
+                                    path: [
+                                        'training-data',
+                                        'norman-picks-Firewhisky',
+                                        'introduction',
+                                    ],
                                 },
                             ],
                         },
@@ -174,9 +172,11 @@ const arrivalAtThreeBroomsticks  = make.module({
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['training-data',
-                                    'norman-picks-Butterbeer',
-                                    'introduction',],
+                                    path: [
+                                        'training-data',
+                                        'norman-picks-Butterbeer',
+                                        'introduction',
+                                    ],
                                 },
                             ],
                         },

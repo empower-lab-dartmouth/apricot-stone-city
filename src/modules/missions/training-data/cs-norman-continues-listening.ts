@@ -1,6 +1,6 @@
 import make from '../../../core/util/make'
 
-const normanContinuesListening  = make.module({
+const normanContinuesListening = make.module({
     id: 'norman-continues-listening',
     submodules: [],
     convoSegments: [
@@ -32,9 +32,11 @@ const normanContinuesListening  = make.module({
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['training-data',
-                                    'morgana-and-training-data',
-                                    'introduction',],
+                                    path: [
+                                        'training-data',
+                                        'morgana-and-training-data',
+                                        'introduction',
+                                    ],
                                 },
                             ],
                         },

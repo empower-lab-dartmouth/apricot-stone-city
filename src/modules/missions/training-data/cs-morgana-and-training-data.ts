@@ -1,6 +1,6 @@
 import make from '../../../core/util/make'
 
-const morganaAndTrainingData  = make.module({
+const morganaAndTrainingData = make.module({
     id: 'morgana-and-training-data',
     submodules: [],
     convoSegments: [
@@ -43,7 +43,6 @@ const morganaAndTrainingData  = make.module({
 
                     [Leo] You know, being a world known actor has its advantages.`,
                 },
-
             ],
             choices: [
                 {
@@ -59,7 +58,6 @@ const morganaAndTrainingData  = make.module({
                         },
                     ],
                 },
-
             ],
         },
         {
@@ -69,7 +67,6 @@ const morganaAndTrainingData  = make.module({
                     type: 'text',
                     text: `[[Morgana] We had some accidents during the last tower defense... Anyway the new one is based on Machine Learning, more specifically Training Data.`,
                 },
-
             ],
             choices: [
                 {
@@ -85,7 +82,6 @@ const morganaAndTrainingData  = make.module({
                         },
                     ],
                 },
-
             ],
         },
         {
@@ -95,7 +91,6 @@ const morganaAndTrainingData  = make.module({
                     type: 'text',
                     text: `[Morgana] It is the data you use to train a dragon or machine learning model to predict the outcome you design them to predict. Did you understand?`,
                 },
-
             ],
             choices: [
                 {
@@ -137,7 +132,6 @@ const morganaAndTrainingData  = make.module({
                     
                     [Leo] By using Training Data we will be able to teach dragons identifying enemies.`,
                 },
-
             ],
             choices: [
                 {
@@ -162,10 +156,8 @@ const morganaAndTrainingData  = make.module({
                     type: 'text',
                     text: `[Morgana] Good.`,
                 },
-
             ],
-            choices: [
-            ],
+            choices: [],
         },
     ],
 })

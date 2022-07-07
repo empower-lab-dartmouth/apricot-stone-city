@@ -1,6 +1,6 @@
 import make from '../../../core/util/make'
 
-const picksFirewhisky  = make.module({
+const picksFirewhisky = make.module({
     id: 'norman-picks-Firewhisky',
     submodules: [],
     convoSegments: [
@@ -127,9 +127,11 @@ const picksFirewhisky  = make.module({
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['training-data',
-                                    'norman-waits-for-his-friend',
-                                    'introduction'],
+                                    path: [
+                                        'training-data',
+                                        'norman-waits-for-his-friend',
+                                        'introduction',
+                                    ],
                                 },
                             ],
                         },
@@ -165,9 +167,11 @@ He starts feeling a bit lonely, since his friend is late, so he starts looking a
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['training-data',
-                                    'norman-waits-for-his-friend',
-                                    'introduction'],
+                                    path: [
+                                        'training-data',
+                                        'norman-waits-for-his-friend',
+                                        'introduction',
+                                    ],
                                 },
                             ],
                         },

@@ -89,7 +89,26 @@ const aWomanStopsHerCar = make.module({
           Carol angrily marches away. She looks back and sees the car is gone.`,
                 },
             ],
-            choices: [],
+            choices: [
+                {
+                    text: 'Continue',
+                    logic: [
+                        {
+                            do: [
+                                {
+                                    type: 'goto',
+                                    path: [
+                                        'root',
+                                        'carol-arrives-at-ASC',
+                                        'carol-arrives-at-cascade',
+                                        'intro',
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
         },
         {
             id: 'Carol-accepts',
@@ -257,7 +276,26 @@ const aWomanStopsHerCar = make.module({
           `,
                 },
             ],
-            choices: [],
+            choices: [
+                {
+                    text: 'Continue',
+                    logic: [
+                        {
+                            do: [
+                                {
+                                    type: 'goto',
+                                    path: [
+                                        'root',
+                                        'carol-arrives-at-ASC',
+                                        'carol-arrives-at-cascade',
+                                        'intro',
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
         },
         {
             id: 'Carol-answers-the-question',
@@ -317,7 +355,26 @@ const aWomanStopsHerCar = make.module({
           `,
                 },
             ],
-            choices: [],
+            choices: [
+                {
+                    text: 'Continue',
+                    logic: [
+                        {
+                            do: [
+                                {
+                                    type: 'goto',
+                                    path: [
+                                        'root',
+                                        'carol-arrives-at-ASC',
+                                        'carol-arrives-at-cascade',
+                                        'intro',
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
         },
         {
             id: 'Carol-listens',
@@ -373,7 +430,26 @@ const aWomanStopsHerCar = make.module({
           `,
                 },
             ],
-            choices: [],
+            choices: [
+                {
+                    text: 'Continue',
+                    logic: [
+                        {
+                            do: [
+                                {
+                                    type: 'goto',
+                                    path: [
+                                        'root',
+                                        'carol-arrives-at-ASC',
+                                        'carol-arrives-at-cascade',
+                                        'intro',
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
         },
         {
             id: 'not-boring',
@@ -445,7 +521,26 @@ const aWomanStopsHerCar = make.module({
           `,
                 },
             ],
-            choices: [],
+            choices: [
+                {
+                    text: 'Continue',
+                    logic: [
+                        {
+                            do: [
+                                {
+                                    type: 'goto',
+                                    path: [
+                                        'root',
+                                        'carol-arrives-at-ASC',
+                                        'carol-arrives-at-cascade',
+                                        'intro',
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
         },
         {
             id: 'silent',
@@ -470,7 +565,26 @@ const aWomanStopsHerCar = make.module({
           `,
                 },
             ],
-            choices: [],
+            choices: [
+                {
+                    text: 'Continue',
+                    logic: [
+                        {
+                            do: [
+                                {
+                                    type: 'goto',
+                                    path: [
+                                        'root',
+                                        'carol-arrives-at-ASC',
+                                        'carol-arrives-at-cascade',
+                                        'intro',
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
         },
     ],
 })

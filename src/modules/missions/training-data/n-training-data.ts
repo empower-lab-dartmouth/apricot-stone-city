@@ -12,7 +12,16 @@ import normanJoinsTheConversation from './cs-norman-joins-the-conversation'
 
 const normanLearnsAboutTrainingData = make.module({
     id: 'training-data',
-    submodules: [arrivalAtThreeBroomsticks,waitsForHisFriend,picksFirewhisky,picksButterbeer,morganaAndTrainingData,morganaAndLeoTalking,normanContinuesListening,normanJoinsTheConversation],
+    submodules: [
+        arrivalAtThreeBroomsticks,
+        waitsForHisFriend,
+        picksFirewhisky,
+        picksButterbeer,
+        morganaAndTrainingData,
+        morganaAndLeoTalking,
+        normanContinuesListening,
+        normanJoinsTheConversation,
+    ],
     convoSegments: [],
 })
 

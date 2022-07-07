@@ -1,6 +1,6 @@
 import make from '../../../core/util/make'
 
-const picksButterbeer  = make.module({
+const picksButterbeer = make.module({
     id: 'norman-picks-Butterbeer',
     submodules: [],
     convoSegments: [
@@ -219,15 +219,16 @@ After the waiter reappears with Norman's drink in hand, they pass it to Norman a
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['training-data',
-                                    'norman-waits-for-his-friend',
-                                    'introduction'],
+                                    path: [
+                                        'training-data',
+                                        'norman-waits-for-his-friend',
+                                        'introduction',
+                                    ],
                                 },
                             ],
                         },
                     ],
                 },
-
             ],
         },
         {
@@ -250,15 +251,16 @@ After the waiter reappears with Norman's drink in hand, they pass it to Norman a
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['training-data',
-                                    'norman-waits-for-his-friend',
-                                    'introduction'],
+                                    path: [
+                                        'training-data',
+                                        'norman-waits-for-his-friend',
+                                        'introduction',
+                                    ],
                                 },
                             ],
                         },
                     ],
                 },
-
             ],
         },
     ],

@@ -244,7 +244,26 @@ const havingDinner = make.module({
                         'Carol walks in to the guest-room. Her eyes go wide from the view of a huge table with more than 15 plates on it. Arpi realizes that Carol looks amazed from the variety of food. They sit and have dinner while listening to Aram Asatryans best hits.',
                 },
             ],
-            choices: [],
+            choices: [
+                {
+                    text: 'Continue',
+                    logic: [
+                        {
+                            do: [
+                                {
+                                    type: 'goto',
+                                    path: [
+                                        'root',
+                                        'carol-arrives-at-ASC',
+                                        'carol-goes-to-bed',
+                                        'carol-enters-the-bedroom',
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
         },
     ],
 })

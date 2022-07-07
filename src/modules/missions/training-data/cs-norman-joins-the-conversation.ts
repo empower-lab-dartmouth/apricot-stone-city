@@ -1,6 +1,6 @@
 import make from '../../../core/util/make'
 
-const normanJoinsTheConversation  = make.module({
+const normanJoinsTheConversation = make.module({
     id: 'norman-joins-the-conversation',
     submodules: [],
     convoSegments: [
@@ -61,9 +61,11 @@ const normanJoinsTheConversation  = make.module({
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['training-data',
-                                    'morgana-and-training-data',
-                                    'introduction',],
+                                    path: [
+                                        'training-data',
+                                        'morgana-and-training-data',
+                                        'introduction',
+                                    ],
                                 },
                             ],
                         },
@@ -89,9 +91,11 @@ const normanJoinsTheConversation  = make.module({
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['training-data',
-                                    'morgana-and-training-data',
-                                    'introduction',],
+                                    path: [
+                                        'training-data',
+                                        'morgana-and-training-data',
+                                        'introduction',
+                                    ],
                                 },
                             ],
                         },

@@ -15,7 +15,7 @@ const toughestNutInTown = make.module({
             ],
             choices: [
                 {
-                    text: 'continue1',
+                    text: 'Continue',
                     logic: [
                         {
                             do: [
@@ -61,7 +61,7 @@ const toughestNutInTown = make.module({
             ],
             choices: [
                 {
-                    text: 'continue2',
+                    text: 'Continue',
                     logic: [
                         {
                             do: [
@@ -86,7 +86,7 @@ const toughestNutInTown = make.module({
             ],
             choices: [
                 {
-                    text: 'continue3',
+                    text: 'Continue',
                     logic: [
                         {
                             do: [
@@ -111,7 +111,7 @@ const toughestNutInTown = make.module({
             ],
             choices: [
                 {
-                    text: 'continue4',
+                    text: 'Continue',
                     logic: [
                         {
                             do: [
@@ -136,20 +136,25 @@ const toughestNutInTown = make.module({
             ],
             choices: [
                 {
-                    text: 'turning-around',
+                    text: 'turn around',
                     logic: [
                         {
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['turning-aroundd'],
+                                    path: [
+                                        'root',
+                                        'carol-arrives-at-ASC',
+                                        'a-woman-stops-her-car',
+                                        'introduction',
+                                    ],
                                 },
                             ],
                         },
                     ],
                 },
                 {
-                    text: 'going-check-the-cat',
+                    text: 'go check the cat',
                     logic: [
                         {
                             do: [
@@ -163,16 +168,7 @@ const toughestNutInTown = make.module({
                 },
             ],
         },
-        {
-            id: 'turning-aroundd',
-            convo: [
-                {
-                    type: 'text',
-                    text: 'As soon as she turns back, a blue car stops by...',
-                },
-            ],
-            choices: [],
-        },
+      
         {
             id: 'going-check-the-catt',
             convo: [
@@ -182,7 +178,26 @@ const toughestNutInTown = make.module({
                         'She approaches the trash can, seeing the cat, gagging, trying to throw up and then she sees a blue glowing cube come out of the cats mouth. She sees an old chest. Carol thinks that in the old chest will be an expensive things. She decides to open it. Then she understand that it is not old chest, it is a "mimic". The mimic eats her and then she appeared in the blue car.',
                 },
             ],
-            choices: [],
+            choices: [
+                {
+                    text: 'Continue walking',
+                    logic:[
+                        {
+                            do:[
+                                {
+                                    type: 'goto',
+                                    path: [
+                                        'root',
+                                        'carol-arrives-at-ASC',
+                                        'a-woman-stops-her-car',
+                                        'introduction',
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
         },
     ],
 })

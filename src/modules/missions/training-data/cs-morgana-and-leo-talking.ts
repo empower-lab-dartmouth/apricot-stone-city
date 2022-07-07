@@ -1,6 +1,6 @@
 import make from '../../../core/util/make'
 
-const morganaAndLeoTalking  = make.module({
+const morganaAndLeoTalking = make.module({
     id: 'morgana-and-leo-talking',
     submodules: [],
     convoSegments: [
@@ -95,9 +95,11 @@ const morganaAndLeoTalking  = make.module({
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['training-data',
-                                    'norman-joins-the-conversation',
-                                    'introduction',],
+                                    path: [
+                                        'training-data',
+                                        'norman-joins-the-conversation',
+                                        'introduction',
+                                    ],
                                 },
                             ],
                         },
@@ -110,9 +112,11 @@ const morganaAndLeoTalking  = make.module({
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['training-data',
-                                    'norman-continues-listening',
-                                    'introduction',],
+                                    path: [
+                                        'training-data',
+                                        'norman-continues-listening',
+                                        'introduction',
+                                    ],
                                 },
                             ],
                         },
@@ -138,9 +142,11 @@ const morganaAndLeoTalking  = make.module({
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['training-data',
-                                    'norman-joins-the-conversation',
-                                    'introduction',],
+                                    path: [
+                                        'training-data',
+                                        'norman-joins-the-conversation',
+                                        'introduction',
+                                    ],
                                 },
                             ],
                         },
@@ -153,9 +159,11 @@ const morganaAndLeoTalking  = make.module({
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['training-data',
-                                    'norman-continues-listening',
-                                    'introduction',],
+                                    path: [
+                                        'training-data',
+                                        'norman-continues-listening',
+                                        'introduction',
+                                    ],
                                 },
                             ],
                         },

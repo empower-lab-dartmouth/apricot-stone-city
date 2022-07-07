@@ -59,12 +59,9 @@ const lostPasport = make.module({
                             do: [
                                 {
                                     type: 'goto',
-                                    path: [
-                                        'root',
-                                        'carol-arrives-at-ASC',
-                                        'walking',
-                                        'walkingUnderRain',
-                                    ],
+                                    path: ['Decide-walk'],
+                                        
+                                    
                                 },
                             ],
                         },
@@ -83,13 +80,18 @@ const lostPasport = make.module({
             ],
             choices: [
                 {
-                    text: '',
+                    text: 'Continue walking',
                     logic: [
                         {
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['Decide-walk'],
+                                    path: [
+                                        'root',
+                                        'carol-arrives-at-ASC',
+                                        'walking',
+                                        'walkingUnderRain',
+                                    ],
                                 },
                             ],
                         },
@@ -108,18 +110,13 @@ const lostPasport = make.module({
             ],
             choices: [
                 {
-                    text: 'Just go',
+                    text: 'Walk alone',
                     logic: [
                         {
                             do: [
                                 {
                                     type: 'goto',
-                                    path: [
-                                        'root',
-                                        'carol-arrives-at-ASC',
-                                        'walking',
-                                        'walkingUnderRain',
-                                    ],
+                                    path: ['Decide-walk'],
                                 },
                             ],
                         },

@@ -1,6 +1,6 @@
 import make from '../../../core/util/make'
 
-const waitsForHisFriend  = make.module({
+const waitsForHisFriend = make.module({
     id: 'norman-waits-for-his-friend',
     submodules: [],
     convoSegments: [
@@ -94,9 +94,11 @@ const waitsForHisFriend  = make.module({
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['training-data',
-                                    'morgana-and-leo-talking',
-                                    'introduction',],
+                                    path: [
+                                        'training-data',
+                                        'morgana-and-leo-talking',
+                                        'introduction',
+                                    ],
                                 },
                             ],
                         },
@@ -120,9 +122,11 @@ const waitsForHisFriend  = make.module({
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['training-data',
-                                    'morgana-and-leo-talking',
-                                    'introduction',],
+                                    path: [
+                                        'training-data',
+                                        'morgana-and-leo-talking',
+                                        'introduction',
+                                    ],
                                 },
                             ],
                         },
@@ -146,9 +150,11 @@ const waitsForHisFriend  = make.module({
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['training-data',
-                                    'morgana-and-leo-talking',
-                                    'introduction',],
+                                    path: [
+                                        'training-data',
+                                        'morgana-and-leo-talking',
+                                        'introduction',
+                                    ],
                                 },
                             ],
                         },

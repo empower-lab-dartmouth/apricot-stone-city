@@ -258,7 +258,7 @@ const onThePlane = make.module({
             convo: [
                 {
                     type: 'text',
-                    text: `"Yes," Carol said, "they're delicious." The old woman nodded, "they are indeed. Very nutritious too. Yes, that nut inside an apricot stone is an Armenian favorite. So, I like to think, that's how the city got its name. From those little nuts: the hidden treat inside a sweet fruit. Do you know what I mean?"`,
+                    text: `"Yes," Carol says, "they're delicious." The old woman nods, "they are indeed. Very nutritious too. Yes, that nut inside an apricot stone is an Armenian favorite. So, I like to think, that's how the city got its name. From those little nuts: the hidden treat inside a sweet fruit. Do you know what I mean?"`,
                 },
             ],
             choices: [

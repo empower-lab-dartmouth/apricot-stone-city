@@ -52,7 +52,26 @@ const exploringATC = make.module({
                         "She gets up, dust on her palms and scratches on her knees. \n <b> She yells:</b>I need nobody's help, I am very capable of handling myself! \nShe continues her path in the rain...",
                 },
             ],
-            choices: [],
+            choices: [
+                {
+                    text: 'Continue',
+                    logic: [
+                        {
+                            do: [
+                                {
+                                    type: 'goto',
+                                    path: [
+                                        'root',
+                                        'carol-arrives-at-ASC',
+                                        'toughest-nut-in-town',
+                                        'walking-under-the-rain',
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
         },
         {
             id: 'look-up',
@@ -106,7 +125,26 @@ const exploringATC = make.module({
                         'Carol thinks for a moment. She looks at the time. She still has a lot of time on her hands, so she nods and takes the watergun from Leo\'s hands.\n\n"Hey! That\'s mine!!!!" <b>Leo yells.</b>\n\n"Not anymore!" <b>she says and shoots Leo with water.</b>\n \nAfter having a lot of fun, she tells Leo that she has to go and leaves...',
                 },
             ],
-            choices: [],
+            choices: [
+                {
+                    text: 'leave',
+                    logic: [
+                        {
+                            do: [
+                                {
+                                    type: 'goto',
+                                    path: [
+                                        'root',
+                                        'carol-arrives-at-ASC',
+                                        'toughest-nut-in-town',
+                                        'walking-under-the-rain',
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
         },
         {
             id: 'hell',
@@ -117,8 +155,28 @@ const exploringATC = make.module({
                         '"Heck no! I\'m already drenched and I don\'t have any spare clothes! How can you be so inconsiderate! I lost my baggage! I lost my passport! You know what?! Go to hell, Leo! You are definitely not as nice as I thought you were!!!" <b>Carol yells and pushes him on the grown.</b>\n\nShe walks along the wet pavement...',
                 },
             ],
-            choices: [],
+            choices: [
+                {
+                    text: 'Leave',
+                    logic: [
+                        {
+                            do: [
+                                {
+                                    type: 'goto',
+                                    path: [
+                                        'root',
+                                        'carol-arrives-at-ASC',
+                                        'toughest-nut-in-town',
+                                        'walking-under-the-rain',
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
         },
+        
     ],
 })
 

@@ -149,7 +149,26 @@ const CarolArrivesAtCascade = make.module({
                         'She walks in to the colorful shop. There are kids running out, there smells very sweet. There are groups of family and friends sitting there and eating. Carol sees them eating ice-cream and large circle of dough with cream inside. She wants one for herself but she realizes she does not have any money. She sees an old woman buying one of this sweets. The old woman sees that she does not have money and decides to share one of donuts with her. Carol very grateful.',
                 },
             ],
-            choices: [],
+            choices: [
+                {
+                    text: 'Continue',
+                    logic: [
+                        {
+                            do: [
+                                {
+                                    type: 'goto',
+                                    path: [
+                                        'root',
+                                        'carol-arrives-at-ASC',
+                                        'having-dinner',
+                                        'arrive-to-the-house',
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
         },
         {
             id: 'carol-sits-there',
@@ -159,7 +178,26 @@ const CarolArrivesAtCascade = make.module({
                     text: `She is very tired, sits at Cascade. She is not in the mood, she does not want to do anything. She sits there about 5 minutes and then Carol sees an interesting statue of a large man leaning over a table. Carol wants to know what statue is that. Then an old woman comes and talks about that statue, she said: 'He is Alexander Tamanyan, an Armenian architect, well known for his work in the city of Yerevan'. And then the old woman decides to share one of donuts with her. Carol very grateful.`,
                 },
             ],
-            choices: [],
+            choices: [
+                {
+                    text: 'Continue',
+                    logic: [
+                        {
+                            do: [
+                                {
+                                    type: 'goto',
+                                    path: [
+                                        'root',
+                                        'carol-arrives-at-ASC',
+                                        'having-dinner',
+                                        'arrive-to-the-house',
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
         },
     ],
 })

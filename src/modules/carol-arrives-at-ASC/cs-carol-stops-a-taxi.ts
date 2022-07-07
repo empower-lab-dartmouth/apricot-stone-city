@@ -9,7 +9,7 @@ const stopsTaxi = make.module({
             convo: [
                 {
                     type: 'text',
-                    text: `Carol is pretty soaked and she is starting to feel cold. She decides to take a taxi. She looks around and sees no taxis standing, therefore she decides to stop one. She comes closer to the edge of the sidewalk and hesitantly raises her hand. A car stops in front of her. She opens the door to get in.\n <b>Taxi Driver:</b> Ու՞ր ենք գնում քուրս:`,
+                    text: `Carol does't want to walk she decides to take a cab and get her thoughts together so she can make fast decisions and be concentrated. As she stand in front of the airport she sees a car approaching with a yellow TAXI sign on it. She raises her thumb as a sign to for the driver to stop. The car slowly approaches her and a middle aged driver looks out of the window and says.\n <b>Taxi Driver:</b> Ու՞ր ենք գնում քուրս:`,
                 },
             ],
             choices: [

@@ -433,7 +433,6 @@ const kMeans = make.module({
                     text: `Merlin: For starters a little bit about unsupervised learning. Unsupervised learning, also known as unsupervised machine learning, uses machine learning algorithms to analyze and cluster unlabeled datasets. These algorithms discover hidden patterns or data groupings without the need for human intervention. Its ability to discover similarities and differences in information make it the ideal solution for exploratory data analysis, cross-selling strategies, customer segmentation, and image recognition. Is all of these clear?
                     `,
                 },
-                
             ],
             choices: [
                 {
@@ -458,7 +457,6 @@ const kMeans = make.module({
                     type: 'text',
                     text: `Merlin: Ok. Now about k-means. K-means clustering is a very famous and powerful unsupervised machine learning algorithm. It is used to solve many complex unsupervised machine learning problems. A K-means clustering algorithm tries to group similar items in the form of clusters. The number of groups is represented by K. Now on the example of our data set I will try to explain how the k-means clustering algorithm works.`,
                 },
-                
             ],
             choices: [
                 {
@@ -483,7 +481,6 @@ const kMeans = make.module({
                     type: 'text',
                     text: `Merlin: We begin with defining the number of clusters. Keep in mind that the accuracy of our clustering largely depends on whether we picked the most optimal number of clusters. In our example things are more simple because we know that we have 4 types of fruit, therefore the correct number of clusters is 4.`,
                 },
-                
             ],
             choices: [
                 {
@@ -508,7 +505,6 @@ const kMeans = make.module({
                     type: 'text',
                     text: `Merlin: Now Let's put 4 random points into our graphs. These points will later become the centroids of our clusters.`,
                 },
-                
             ],
             choices: [
                 {
@@ -533,7 +529,6 @@ const kMeans = make.module({
                     type: 'image',
                     src: `https://user-images.githubusercontent.com/68229446/177508829-8acee68a-ab77-42b0-8053-d631d2f743c1.png`,
                 },
-                
             ],
             choices: [
                 {
@@ -562,7 +557,6 @@ const kMeans = make.module({
                     type: 'image',
                     src: `https://user-images.githubusercontent.com/68229446/177510775-73a683d1-06a3-4420-81f0-837bbe8c1081.png`,
                 },
-                
             ],
             choices: [
                 {
@@ -591,7 +585,6 @@ const kMeans = make.module({
                     type: 'image',
                     src: `https://user-images.githubusercontent.com/68229446/177511435-77925b07-a4cd-439a-b4ce-73ad2bcc96f8.png`,
                 },
-                
             ],
             choices: [
                 {
@@ -620,7 +613,6 @@ const kMeans = make.module({
                     type: 'image',
                     src: `https://user-images.githubusercontent.com/68229446/177512075-bf335f44-050b-4a9e-b69f-614bcbf8c1ac.png`,
                 },
-                
             ],
             choices: [
                 {
@@ -645,8 +637,6 @@ const kMeans = make.module({
                     type: 'text',
                     text: `Merlin: You know our way of clustering is surprisingly similar to the actual fruit groups. Just check this out!`,
                 },
-                
-                
             ],
             choices: [
                 {
@@ -675,11 +665,8 @@ const kMeans = make.module({
                     type: 'image',
                     src: `https://user-images.githubusercontent.com/68229446/177513026-799b6d6a-04a4-4b1c-aa03-234d687b883c.png`,
                 },
-                
             ],
-            choices: [
-
-            ],
+            choices: [],
         },
     ],
 })
