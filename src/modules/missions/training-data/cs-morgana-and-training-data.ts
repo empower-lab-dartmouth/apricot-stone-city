@@ -157,7 +157,26 @@ const morganaAndTrainingData = make.module({
                     text: `[Morgana] Good.`,
                 },
             ],
-            choices: [],
+            choices: [   
+                {
+                    text: `Start another mission`,
+                    logic: [
+                        {
+                            do: [
+                                {
+                                    type: 'goto',
+                                    path: [
+                                        'root',
+                                        'k-means',
+                                        'norman-learns-k-means',
+                                        'introduction',
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },     
+                ],
         },
     ],
 })

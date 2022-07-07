@@ -12,14 +12,13 @@ const missingBag = make.module({
                     text:
                         '<b>At first Carol check out and then she goes to take her baggage.She is at the line, trying to find her baggage. Carol has bad feeling and restless standing at the line. Someone hit her shoulder and go away. Carol feels unconfident in Apricot Stone City.</b>',
                 },
-                
             ],
             choices: [
                 {
                     text: 'takes a baggage taht looks like hers',
-                    logic:[
+                    logic: [
                         {
-                            do:[
+                            do: [
                                 {
                                     type: 'goto',
                                     path: ['take-it'],
@@ -30,9 +29,9 @@ const missingBag = make.module({
                 },
                 {
                     text: 'doesnt find hers',
-                    logic:[
+                    logic: [
                         {
-                            do:[
+                            do: [
                                 {
                                     type: 'goto',
                                     path: ['leave-it'],
@@ -55,9 +54,9 @@ const missingBag = make.module({
             choices: [
                 {
                     text: 'Walk alone',
-                    logic:[
+                    logic: [
                         {
-                            do:[
+                            do: [
                                 {
                                     type: 'goto',
                                     path: [
@@ -73,9 +72,9 @@ const missingBag = make.module({
                 },
                 {
                     text: 'Take a cab',
-                    logic:[
+                    logic: [
                         {
-                            do:[
+                            do: [
                                 {
                                     type: 'goto',
                                     path: [
@@ -103,9 +102,9 @@ const missingBag = make.module({
             choices: [
                 {
                     text: 'Walk alone',
-                    logic:[
+                    logic: [
                         {
-                            do:[
+                            do: [
                                 {
                                     type: 'goto',
                                     path: [
@@ -121,9 +120,9 @@ const missingBag = make.module({
                 },
                 {
                     text: 'Take a cab',
-                    logic:[
+                    logic: [
                         {
-                            do:[
+                            do: [
                                 {
                                     type: 'goto',
                                     path: [

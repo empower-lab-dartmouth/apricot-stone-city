@@ -176,7 +176,6 @@ const exploringATC = make.module({
                 },
             ],
         },
-        
     ],
 })
 

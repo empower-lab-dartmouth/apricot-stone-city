@@ -168,7 +168,7 @@ const toughestNutInTown = make.module({
                 },
             ],
         },
-      
+
         {
             id: 'going-check-the-catt',
             convo: [
@@ -181,9 +181,9 @@ const toughestNutInTown = make.module({
             choices: [
                 {
                     text: 'Continue walking',
-                    logic:[
+                    logic: [
                         {
-                            do:[
+                            do: [
                                 {
                                     type: 'goto',
                                     path: [

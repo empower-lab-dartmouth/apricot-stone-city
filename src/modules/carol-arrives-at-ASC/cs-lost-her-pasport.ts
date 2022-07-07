@@ -60,8 +60,6 @@ const lostPasport = make.module({
                                 {
                                     type: 'goto',
                                     path: ['Decide-walk'],
-                                        
-                                    
                                 },
                             ],
                         },

@@ -6,6 +6,8 @@ import carolArrivesAtASC from './carol-arrives-at-ASC/n-carol-arrives-at-ASC'
 import normanArrivesAtASC from './norman-adventure/n-norman-adventures'
 import normanLearnsKMeans from './missions/unsupervised-learning/n-k-means'
 import normanLearnsAboutTrainingData from './missions/training-data/n-training-data'
+import normancreatespell from './missions/norman-in-hogwarts/n-norman-training-data'
+import NormanNeuralNetwork from './missions/neural-networks/n-neural-networks'
 
 const root = make.module({
     id: 'root',
@@ -15,6 +17,8 @@ const root = make.module({
         normanArrivesAtASC,
         normanLearnsKMeans,
         normanLearnsAboutTrainingData,
+        normancreatespell,
+        NormanNeuralNetwork
     ],
     convoSegments: [
         {
@@ -84,25 +88,7 @@ const root = make.module({
                         },
                     ],
                 },
-                {
-                    text: `k-means`,
-                    logic: [
-                        {
-                            do: [
-                                {
-                                    type: 'goto',
-                                    path: [
-                                        'root',
-                                        'k-means',
-                                        'norman-learns-k-means',
-                                        'introduction',
-                                    ],
-                                },
-                            ],
-                        },
-                    ],
-                },
-                
+
                 {
                     text: 'updateCounter',
                     logic: [

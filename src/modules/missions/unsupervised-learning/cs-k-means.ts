@@ -666,7 +666,26 @@ const kMeans = make.module({
                     src: `https://user-images.githubusercontent.com/68229446/177513026-799b6d6a-04a4-4b1c-aa03-234d687b883c.png`,
                 },
             ],
-            choices: [],
+            choices: [
+                {
+                    text: `Start another mission`,
+                    logic: [
+                        {
+                            do: [
+                                {
+                                    type: 'goto',
+                                    path: [
+                                        'root',
+                                        'neural-networks',
+                                        'cs.norman-and-merlin-in-world-of-neural-networks',
+                                        'auto-repair-shop',
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
         },
     ],
 })
