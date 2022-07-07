@@ -95,7 +95,7 @@ const waitsForHisFriend  = make.module({
                                 {
                                     type: 'goto',
                                     path: ['training-data',
-                                    'morgana-and-training-data',
+                                    'morgana-and-leo-talking',
                                     'introduction',],
                                 },
                             ],
@@ -121,7 +121,7 @@ const waitsForHisFriend  = make.module({
                                 {
                                     type: 'goto',
                                     path: ['training-data',
-                                    'morgana-and-training-data',
+                                    'morgana-and-leo-talking',
                                     'introduction',],
                                 },
                             ],
@@ -147,7 +147,7 @@ const waitsForHisFriend  = make.module({
                                 {
                                     type: 'goto',
                                     path: ['training-data',
-                                    'morgana-and-training-data',
+                                    'morgana-and-leo-talking',
                                     'introduction',],
                                 },
                             ],

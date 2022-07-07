@@ -3,7 +3,7 @@ import { nestedModule } from './child-module'
 import { stateManagerConstructor } from '../core/convo-engine/state-manager'
 import log from '../core/util/logging'
 import carolArrivesAtASC from './carol-arrives-at-ASC/n-carol-arrives-at-ASC'
-import normanArrivesAtASC from './norman-arrives-at-ASC/n-norman-arrives-at-ASC'
+import normanArrivesAtASC from './norman-adventure/n-norman-adventures'
 import normanLearnsKMeans from './missions/unsupervised-learning/n-k-means'
 import normanLearnsAboutTrainingData from './missions/training-data/n-training-data'
 
