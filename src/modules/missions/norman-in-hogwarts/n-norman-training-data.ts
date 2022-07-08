@@ -8,7 +8,7 @@ import conclusion from './cs.conclusion'
 
 const normancreatespell = make.module({
     id: 'norman-in-hogwarts',
-    submodules: [training, decision, library,conclusion],
+    submodules: [training, decision, library, conclusion],
     convoSegments: [],
 })
 

@@ -50,9 +50,8 @@ const root = make.module({
                         },
                     ],
                 },
-            ]
+            ],
         },
-        
 
         {
             id: 'get-info-name',

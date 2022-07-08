@@ -144,7 +144,7 @@ const blackboard = make.module({
                                         'norman-in-hogwarts',
                                         'norman-wants-to-create-a-new-spell',
                                         'start-create',
-                                    ],//the conersations of this neighborhood are not finished
+                                    ], //the conersations of this neighborhood are not finished
                                 },
                             ],
                         },

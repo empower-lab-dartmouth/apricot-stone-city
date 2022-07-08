@@ -47,7 +47,9 @@ import {
     GeneralizedState,
 } from '../../models/state/state'
 import { JSONValue } from '../../models/common/common-types'
-import storytellerContentConfigurations, { startingConvoSegmentPathValue } from '../../../storyteller-config'
+import storytellerContentConfigurations, {
+    startingConvoSegmentPathValue,
+} from '../../../storyteller-config'
 
 function convoModuleId(unvalidatedId: _ModuleId): ConvoModuleId {
     return unvalidatedId as ConvoModuleId
@@ -60,7 +62,7 @@ function convoSegmentId(unvalidatedId: _ConvoSegmentId): ConvoSegmentId {
 export function absoluteConvoSegmentPath(
     content: _ConvoSegmentPath
 ): AbsoluteConvoSegmentPath {
-    console.log(content);
+    console.log(content)
     if (content.length == 0) {
         throw new Error(`Empty convo segment path is not allowed`)
     }
@@ -213,18 +215,22 @@ const defaultChoice: _Choice = {
     text: '⟳',
     logic: [
         {
-            do: [{
-                type: 'goto',
-                path: ['root', '/start'],
-            }]
-        }
-    ]
+            do: [
+                {
+                    type: 'goto',
+                    path: ['root', '/start'],
+                },
+            ],
+        },
+    ],
 }
 
 function convoSegment(content: _ConvoSegment): ConvoSegment {
     return {
         id: convoSegmentId(content.id),
-        choices: [...content.choices, defaultChoice].map(unvalidated => choice(unvalidated)),
+        choices: [...content.choices, defaultChoice].map(unvalidated =>
+            choice(unvalidated)
+        ),
         convoNodes: content.convo.map(unvalidated => convoNode(unvalidated)),
         preLogic: [],
         postLogic: [],

@@ -57,13 +57,17 @@ const tooManyBags = make.module({
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['root','norman-arrives-at-ASC','enteringWorldAware','whats-going-on'], //first end
+                                    path: [
+                                        'root',
+                                        'norman-arrives-at-ASC',
+                                        'enteringWorldAware',
+                                        'whats-going-on',
+                                    ], //first end
                                 },
                             ],
                         },
                     ],
                 },
-                
             ],
         },
         {
@@ -82,7 +86,12 @@ const tooManyBags = make.module({
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['root','norman-arrives-at-ASC','road-hotel','go-to-hotel'], //second end
+                                    path: [
+                                        'root',
+                                        'norman-arrives-at-ASC',
+                                        'road-hotel',
+                                        'go-to-hotel',
+                                    ], //second end
                                 },
                             ],
                         },
@@ -90,7 +99,6 @@ const tooManyBags = make.module({
                 },
             ],
         },
-        
     ],
 })
 

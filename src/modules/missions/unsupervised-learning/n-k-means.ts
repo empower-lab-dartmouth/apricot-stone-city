@@ -6,7 +6,7 @@ import unsupervisedLearning from './cs-unsupervised-learning-overview'
 
 const normanLearnsKMeans = make.module({
     id: 'k-means',
-    submodules: [kMeans,unsupervisedLearning],
+    submodules: [kMeans, unsupervisedLearning],
     convoSegments: [],
 })
 

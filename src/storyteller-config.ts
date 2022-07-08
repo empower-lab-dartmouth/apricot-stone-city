@@ -17,14 +17,16 @@ const rootModule = root
 
 const usePreLaunchTests: boolean = true
 
-const startingConvoSegmentPath = absoluteConvoSegmentPath(['root', '/start'])
+export const startingConvoSegmentPathValue = ['root', '/start']
 
 /// // Stop editing. Don't change anything below this
 
 const storytellerContentConfigurations: StorytellerConfig = {
     rootModule,
     initialState,
-    startingConvoSegmentPath,
+    startingConvoSegmentPath: absoluteConvoSegmentPath(
+        startingConvoSegmentPathValue
+    ),
 }
 
 if (usePreLaunchTests) {

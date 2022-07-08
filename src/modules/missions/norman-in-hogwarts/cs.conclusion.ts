@@ -1,7 +1,7 @@
 import make from '../../../core/util/make'
 import { text } from '../../../core/util/make/unvalidated-type-constructors'
 
-const  conclusion = make.module({
+const conclusion = make.module({
     id: 'conclusion',
     submodules: [],
     convoSegments: [
@@ -10,9 +10,9 @@ const  conclusion = make.module({
             convo: [
                 {
                     type: 'text',
-                    text:'so, what happened in our story in terms of machine learning?',
+                    text:
+                        'so, what happened in our story in terms of machine learning?',
                 },
-                
             ],
             choices: [
                 {
@@ -33,12 +33,11 @@ const  conclusion = make.module({
         {
             id: 'partone',
             convo: [
-                
                 {
                     type: 'text',
-                    text:'in machine learning, the library is train data. when he tried to create a spell without knowing a lot of spells, he got weird results',
+                    text:
+                        'in machine learning, the library is train data. when he tried to create a spell without knowing a lot of spells, he got weird results',
                 },
-                
             ],
             choices: [
                 {
@@ -59,11 +58,11 @@ const  conclusion = make.module({
         {
             id: 'parttwo',
             convo: [
-                
                 {
                     type: 'text',
-                    text:'but when he went to library, read some spell books and got a bigger training data, he created a spell successfully!',
-                }
+                    text:
+                        'but when he went to library, read some spell books and got a bigger training data, he created a spell successfully!',
+                },
             ],
             choices: [
                 {
@@ -81,7 +80,6 @@ const  conclusion = make.module({
                 },
             ],
         },
-        
     ],
 })
 

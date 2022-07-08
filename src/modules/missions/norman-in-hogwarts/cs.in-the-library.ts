@@ -113,7 +113,12 @@ const library = make.module({
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['root', 'norman-in-hogwarts','conclusion','conc'],
+                                    path: [
+                                        'root',
+                                        'norman-in-hogwarts',
+                                        'conclusion',
+                                        'conc',
+                                    ],
                                 },
                             ],
                         },

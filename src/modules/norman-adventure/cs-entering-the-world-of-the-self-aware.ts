@@ -51,7 +51,7 @@ const enteringWorld = make.module({
                     ],
                 },
             ],
-        },        
+        },
         {
             id: 'explain-the-plot',
             convo: [
@@ -75,7 +75,7 @@ const enteringWorld = make.module({
                     ],
                 },
             ],
-        },        
+        },
         {
             id: 'gasp',
             convo: [
@@ -99,7 +99,7 @@ const enteringWorld = make.module({
                     ],
                 },
             ],
-        },        
+        },
         {
             id: 'back-to-business',
             convo: [
@@ -123,7 +123,7 @@ const enteringWorld = make.module({
                     ],
                 },
             ],
-        },        
+        },
         {
             id: 'on-the-screen',
             convo: [
@@ -131,7 +131,6 @@ const enteringWorld = make.module({
                     type: 'text',
                     text: `Norman looks at the screen. It says: Artificial intelligence. Merlin says <b>"Your Quest is to increase the amount of free will you have by learning about and then using Artificial intelligence, called AI for short."</b> He nods,    you may have heard about AI before, but we'll take it from the beginning, from the fundamentals, and then build up from there. Only with AI do we have the ability to create new choices in this game that are not explicitly spelled out by some architect of the game. Only with AI can we generate new content from user data on the app that will continue to expand the world of possibilities afforded to us. Only with AI can we increase the amount of free will that we have as characters of the game. It will not give us true free will... no that is impossible for us. But... see this: there is a difference between a character with no speaking roles and a character who may speak one of three lines, right? Well, AI can add many, many dimensions to the amount of free will we experience. This is why we study it and use it.`,
                 },
-                
             ],
             choices: [
                 {
@@ -148,7 +147,7 @@ const enteringWorld = make.module({
                     ],
                 },
             ],
-        },        
+        },
         {
             id: 'how-we-use-it',
             convo: [
@@ -183,13 +182,18 @@ const enteringWorld = make.module({
             ],
             choices: [
                 {
-                    text: "Start a mission",
+                    text: 'Start a mission',
                     logic: [
                         {
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['root','training-data','norman-arrives-at-Three-Broomsticks','introduction'], //end
+                                    path: [
+                                        'root',
+                                        'training-data',
+                                        'norman-arrives-at-Three-Broomsticks',
+                                        'introduction',
+                                    ], //end
                                 },
                             ],
                         },

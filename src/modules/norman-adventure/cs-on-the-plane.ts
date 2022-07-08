@@ -38,7 +38,7 @@ const normanOnPlane = make.module({
             ],
             choices: [
                 {
-                    text: 'Norman\'s story',
+                    text: "Norman's story",
                     logic: [
                         {
                             do: [
@@ -153,7 +153,12 @@ const normanOnPlane = make.module({
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['root','norman-arrives-at-ASC','bags','getting-luggage'],
+                                    path: [
+                                        'root',
+                                        'norman-arrives-at-ASC',
+                                        'bags',
+                                        'getting-luggage',
+                                    ],
                                 },
                             ],
                         },
