@@ -1,6 +1,6 @@
 import make from '../../../core/util/make'
 
-const neuralNetworks  = make.module({
+const neuralNetworks = make.module({
     id: 'cs.norman-and-merlin-in-world-of-neural-networks',
     submodules: [],
     convoSegments: [
@@ -9,13 +9,14 @@ const neuralNetworks  = make.module({
             convo: [
                 {
                     type: 'image',
-                    src: 'https://camo.githubusercontent.com/7038b9513fdf0f785ea1603b5628fc5db1da12ded186309f76f26e4e8f0ac23e/68747470733a2f2f636c6f756466726f6e742d75732d656173742d312e696d616765732e6172637075626c697368696e672e636f6d2f706d6e2f495552584f524635534245364c4458325a5a34585734554b50592e6a7067',
+                    src:
+                        'https://camo.githubusercontent.com/7038b9513fdf0f785ea1603b5628fc5db1da12ded186309f76f26e4e8f0ac23e/68747470733a2f2f636c6f756466726f6e742d75732d656173742d312e696d616765732e6172637075626c697368696e672e636f6d2f706d6e2f495552584f524635534245364c4458325a5a34585734554b50592e6a7067',
                 },
                 {
                     type: 'text',
-                    text: 'They see an auto repair shop while driving, Merlin says, great, we can stop here and use this as an example.',
+                    text:
+                        'They see an auto repair shop while driving, Merlin says, great, we can stop here and use this as an example.',
                 },
-                
             ],
             choices: [
                 {
@@ -31,7 +32,6 @@ const neuralNetworks  = make.module({
                         },
                     ],
                 },
-
             ],
         },
         {
@@ -39,7 +39,8 @@ const neuralNetworks  = make.module({
             convo: [
                 {
                     type: 'image',
-                    src: 'https://camo.githubusercontent.com/7846b9dc5fb2ee4d3c71fbb19f5be0d93390531582a1ef503fd4e33972fe2385/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f6d61782f313430302f312a72596e41584451626369376f55585a584656772d47672e706e67',
+                    src:
+                        'https://camo.githubusercontent.com/7846b9dc5fb2ee4d3c71fbb19f5be0d93390531582a1ef503fd4e33972fe2385/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f6d61782f313430302f312a72596e41584451626369376f55585a584656772d47672e706e67',
                 },
                 {
                     type: 'text',
@@ -53,7 +54,7 @@ const neuralNetworks  = make.module({
             ],
             choices: [
                 {
-                    text: 'So easy, where\'s the catch?',
+                    text: "So easy, where's the catch?",
                     logic: [
                         {
                             do: [
@@ -72,16 +73,19 @@ const neuralNetworks  = make.module({
             convo: [
                 {
                     type: 'image',
-                    src: 'https://camo.githubusercontent.com/4c3b5a4dfe2523bab649d44f5a74d8a64e38d7b235762384f93969151c0dbd94/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f6d61782f313030302f312a7a5069696b39766c575f473747553962546a78684a512e6a706567',
+                    src:
+                        'https://camo.githubusercontent.com/4c3b5a4dfe2523bab649d44f5a74d8a64e38d7b235762384f93969151c0dbd94/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f6d61782f313030302f312a7a5069696b39766c575f473747553962546a78684a512e6a706567',
                 },
                 {
                     type: 'text',
-                    text: 'Let\'s say you don\'t know how a machine works.How would you connect the sensors?',
+                    text:
+                        "Let's say you don't know how a machine works.How would you connect the sensors?",
                 },
             ],
             choices: [
                 {
-                    text: 'I will use transistors, integrated circuits or logic gates.',
+                    text:
+                        'I will use transistors, integrated circuits or logic gates.',
                     logic: [
                         {
                             do: [
@@ -100,13 +104,14 @@ const neuralNetworks  = make.module({
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['connect-all-sensors-to-all-outputs'],
+                                    path: [
+                                        'connect-all-sensors-to-all-outputs',
+                                    ],
                                 },
                             ],
                         },
                     ],
                 },
-                
             ],
         },
         {
@@ -125,16 +130,17 @@ const neuralNetworks  = make.module({
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['connect-all-sensors-to-all-outputs',],
+                                    path: [
+                                        'connect-all-sensors-to-all-outputs',
+                                    ],
                                 },
                             ],
-                            
                         },
                     ],
                 },
             ],
-        },   
-        {    
+        },
+        {
             id: 'connect-all-sensors-to-all-outputs',
             convo: [
                 {
@@ -152,24 +158,21 @@ const neuralNetworks  = make.module({
             ],
             choices: [
                 {
-                    text: 'What if it doesn\'t work?',
+                    text: "What if it doesn't work?",
                     logic: [
                         {
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['work',],
+                                    path: ['work'],
                                 },
                             ],
-                            
                         },
                     ],
-
                 },
             ],
-            
         },
-        {    
+        {
             id: 'work',
             convo: [
                 {
@@ -189,18 +192,15 @@ const neuralNetworks  = make.module({
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['nn',],
+                                    path: ['nn'],
                                 },
                             ],
-                            
                         },
                     ],
-                    
                 },
             ],
-            
         },
-        {    
+        {
             id: 'nn',
             convo: [
                 {
@@ -214,24 +214,21 @@ const neuralNetworks  = make.module({
             ],
             choices: [
                 {
-                    text: 'What if it\'s wrong?',
+                    text: "What if it's wrong?",
                     logic: [
                         {
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['wrong',],
+                                    path: ['wrong'],
                                 },
                             ],
-                            
                         },
                     ],
-                    
                 },
             ],
-            
         },
-        {    
+        {
             id: 'wrong',
             convo: [
                 {
@@ -253,9 +250,9 @@ const neuralNetworks  = make.module({
                                     type: 'goto',
                                     path: [
                                         'root',
-                                        'norman-in-hogwarts',
-                                        'norman-wants-to-create-a-new-spell',
-                                        'start-create',
+                                        'Norman-learns-about-gradient-descent',
+                                        'blackboard',
+                                        'start',
                                     ],
                                 },
                             ],
@@ -263,7 +260,6 @@ const neuralNetworks  = make.module({
                     ],
                 },
             ],
-            
         },
     ],
 })

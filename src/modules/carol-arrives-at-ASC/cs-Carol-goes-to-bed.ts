@@ -181,7 +181,7 @@ const carolGoesToBed = make.module({
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['falling-photo'],
+                                    path: ['root','norman-arrives-at-ASC','norman-on-the-plane','introduction'],
                                 },
                             ],
                         },

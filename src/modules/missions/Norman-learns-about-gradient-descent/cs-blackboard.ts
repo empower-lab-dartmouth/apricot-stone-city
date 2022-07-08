@@ -35,14 +35,12 @@ const blackboard = make.module({
                 {
                     type: 'text',
                     text:
-                        "In the dark secret room Norman starts to feel overwhelmed. He starts to wonder how his life became so complicated in one day. He came to ASC with expectations of bright memories, but now he is stuck with some strangers talking about some ridiculous stuff about AI. Feeling confused, Norman at first thinks of taking some break, but his curiosity wins over him. He was quite excited to learn more about the world he lives in. Norman walks around the room, takes deep breath to get his thoughts together. Suddenly, on the blackboard he sees an interesting, and most importantly easy graph, so he asks about it. <b>\n It is called Gradient Descent. Want me to teach more about it? -Morgana replies.</b>",
-
-                        
+                        'In the dark secret room Norman starts to feel overwhelmed. He starts to wonder how his life became so complicated in one day. He came to ASC with expectations of bright memories, but now he is stuck with some strangers talking about some ridiculous stuff about AI. Feeling confused, Norman at first thinks of taking some break, but his curiosity wins over him. He was quite excited to learn more about the world he lives in. Norman walks around the room, takes deep breath to get his thoughts together. Suddenly, on the blackboard he sees an interesting, and most importantly easy graph, so he asks about it. <b>\n It is called Gradient Descent. Want me to teach more about it? -Morgana replies.</b>',
                 },
             ],
             choices: [
                 {
-                    text: "Thaks, I will do it myself",
+                    text: 'Thanks, I will do it myself',
                     logic: [
                         {
                             do: [
@@ -55,13 +53,13 @@ const blackboard = make.module({
                     ],
                 },
                 {
-                    text: "Thaks, that is very nice of you",
+                    text: 'Thanks, that is very nice of you',
                     logic: [
                         {
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['start'],
+                                    path: ['carols-story'],
                                 },
                             ],
                         },
@@ -74,9 +72,8 @@ const blackboard = make.module({
             convo: [
                 {
                     type: 'text',
-                    text: 'Norman walks out of the room. he is stands in the hallway. e wants to determine the best way to learn about the concept written on the blackboard. He starts to think about AI and what is used during AI creation. When he finishes the thinking he notices that he has reached the end of the hall. on his right he sees a door',
-
-         
+                    text:
+                        'Norman walks out of the room. he is stands in the hallway. e wants to determine the best way to learn about the concept written on the blackboard. He starts to think about AI and what is used during AI creation. When he finishes the thinking he notices that he has reached the end of the hall. on his right he sees a door',
                 },
             ],
             choices: [
@@ -106,7 +103,6 @@ const blackboard = make.module({
                         },
                     ],
                 },
-              
             ],
         },
         {
@@ -125,7 +121,12 @@ const blackboard = make.module({
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['start'],
+                                    path: [
+                                        'root',
+                                        'norman-in-hogwarts',
+                                        'norman-wants-to-create-a-new-spell',
+                                        'start-create',
+                                    ], //the conersations of this neighborhood are not finished
                                 },
                             ],
                         },
@@ -138,13 +139,17 @@ const blackboard = make.module({
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['comment-on-earrings'],
+                                    path: [
+                                        'root',
+                                        'norman-in-hogwarts',
+                                        'norman-wants-to-create-a-new-spell',
+                                        'start-create',
+                                    ],//the conersations of this neighborhood are not finished
                                 },
                             ],
                         },
                     ],
                 },
-               
             ],
         },
         {
@@ -430,7 +435,7 @@ const blackboard = make.module({
                 },
             ],
         },
-       
+
         {
             id: 'fasten-seat-belt',
             convo: [
@@ -480,18 +485,18 @@ const blackboard = make.module({
                 },
             ],
             choices: [
-                {                                    
-                    text: 'Grab your bag',
+                {
+                    text: 'Grab your bag/next mission',
                     logic: [
                         {
                             do: [
                                 {
                                     type: 'goto',
-                                     path: [
+                                    path: [
                                         'root',
-                                        'Norman-learns-about-gradient-descent',
-                                        'blackboard',
-                                        'start',
+                                        'norman-in-hogwarts',
+                                        'norman-wants-to-create-a-new-spell',
+                                        'start-create',
                                     ],
                                 },
                             ],
@@ -512,7 +517,7 @@ const blackboard = make.module({
             ],
             choices: [
                 {
-                    text: 'Grab your bag',
+                    text: 'Grab your bag/next mission',
                     logic: [
                         {
                             do: [
@@ -520,9 +525,9 @@ const blackboard = make.module({
                                     type: 'goto',
                                     path: [
                                         'root',
-                                        'Norman-learns-about-gradient-descent',
-                                        'blackboard',
-                                        'start',
+                                        'norman-in-hogwarts',
+                                        'norman-wants-to-create-a-new-spell',
+                                        'start-create',
                                     ],
                                 },
                             ],

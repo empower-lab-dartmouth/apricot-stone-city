@@ -1,12 +1,12 @@
 import make from '../../../core/util/make'
 
-const  training = make.module({
+const training = make.module({
     id: 'in-training-field',
     submodules: [],
     convoSegments: [
         {
             id: 'training-field',
-              convo: [
+            convo: [
                 {
                     type: 'text',
                     text: `Norman goes to the training field \n\n <i>Alright, I'm ready to make a new spell. After all, I'm the best student in our group!</i>`,
@@ -112,7 +112,7 @@ const  training = make.module({
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['root','/start'],
+                                    path: ['root', 'norman-in-hogwarts','conclusion','conc'],
                                 },
                             ],
                         },
@@ -131,7 +131,6 @@ const  training = make.module({
                     type: 'image',
                     src: `https://user-images.githubusercontent.com/101460264/177519927-3657d400-eb9a-49b9-8b22-c48a138ff68e.jpg`,
                 },
-                
             ],
             choices: [
                 {
