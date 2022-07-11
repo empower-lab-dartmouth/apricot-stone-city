@@ -190,10 +190,10 @@ const enteringWorld = make.module({
                                     type: 'goto',
                                     path: [
                                         'root',
-                                        'training-data',
-                                        'norman-arrives-at-Three-Broomsticks',
-                                        'introduction',
-                                    ], //end
+                                        'intro-to-ai-general',
+                                        'cs.norman-and-the-taxi-driver-intro-to-ai',
+                                        'intro-to-ai-introduction',
+                                    ], 
                                 },
                             ],
                         },

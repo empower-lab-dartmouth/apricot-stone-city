@@ -9,6 +9,7 @@ import normanLearnsKMeans from './missions/unsupervised-learning/n-k-means'
 import normanLearnsAboutTrainingData from './missions/training-data/n-training-data'
 import normancreatespell from './missions/norman-in-hogwarts/n-norman-training-data'
 import NormanNeuralNetwork from './missions/neural-networks/n-neural-networks'
+import IntroToAI from './missions/intro to AI/n-intro-to-ai'
 import { userInfo } from 'os'
 import { unsafeInsertAt } from 'fp-ts/lib/Array'
 import { state } from 'fp-ts/lib/State'
@@ -24,6 +25,7 @@ const root = make.module({
         normanLearnsAboutTrainingData,
         normancreatespell,
         NormanNeuralNetwork,
+        IntroToAI,
     ],
     convoSegments: [
         {
