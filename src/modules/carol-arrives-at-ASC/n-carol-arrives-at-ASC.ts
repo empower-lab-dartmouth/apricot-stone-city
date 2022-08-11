@@ -13,6 +13,7 @@ import havingDinner from './cs-dinner'
 import exploringATC from './cs-exploring-ASC-upset'
 import lostPasport from './cs-lost-her-pasport'
 import solemWalk from './cs-solemn-walk-in-the-rain'
+import teletubbies from './cs-teletubbies'
 
 const carolArrivesAtASC = make.module({
     id: 'carol-arrives-at-ASC',
@@ -29,6 +30,7 @@ const carolArrivesAtASC = make.module({
         exploringATC,
         lostPasport,
         solemWalk,
+        teletubbies,
     ],
     convoSegments: [],
 })

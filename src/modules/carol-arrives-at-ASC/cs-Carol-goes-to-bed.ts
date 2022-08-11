@@ -121,7 +121,7 @@ const carolGoesToBed = make.module({
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['goes-to-bed'],
+                                    path: ['falling-photo'],
                                 },
                             ],
                         },
@@ -183,9 +183,9 @@ const carolGoesToBed = make.module({
                                     type: 'goto',
                                     path: [
                                         'root',
-                                        'norman-arrives-at-ASC',
-                                        'norman-on-the-plane',
-                                        'introduction',
+                                        'carol-arrives-at-ASC',
+                                        'teletubbies',
+                                        'carol-wakes-up',
                                     ],
                                 },
                             ],

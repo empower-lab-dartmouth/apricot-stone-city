@@ -319,7 +319,7 @@ const solemWalk = make.module({
             convo: [
                 {
                     type: 'text',
-                    text: `<b>Nothing useful in my purse, goddamnit! I guess I'll pull a "grandma move" and hit him with my purse instead.</b>\nShe slams it on his head and runs away.\nShe yells <b>"TAXI!!!!"</b. and runs to the first one that stops...`,
+                    text: `<b>Nothing useful in my purse, goddamnit! I guess I'll pull a "grandma move" and hit him with my purse instead.</b>\nShe slams it on his head and runs away.\nShe yells <b>"TAXI!!!!"</b> and runs to the first one that stops...`,
                 },
             ],
             choices: [

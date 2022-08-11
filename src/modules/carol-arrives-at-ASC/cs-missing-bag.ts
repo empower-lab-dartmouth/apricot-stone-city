@@ -1,4 +1,5 @@
 import make from '../../core/util/make'
+import { image } from '../../core/util/make/unvalidated-type-constructors'
 
 const missingBag = make.module({
     id: 'missing-bags',
@@ -12,6 +13,10 @@ const missingBag = make.module({
                     text:
                         '<b>At first Carol check out and then she goes to take her baggage.She is at the line, trying to find her baggage. Carol has bad feeling and restless standing at the line. Someone hit her shoulder and go away. Carol feels unconfident in Apricot Stone City.</b>',
                 },
+                {
+                    type: 'image',
+                    src: 'https://static7.depositphotos.com/1003587/687/i/600/depositphotos_6875146-stock-photo-luggage.jpg',
+                }
             ],
             choices: [
                 {

@@ -66,6 +66,37 @@ const onThePlane = make.module({
             ],
             choices: [
                 {
+                    text: 'teletubbie shortcut',
+                    logic: [
+                        {
+                            do: [
+                                {
+                                    type: 'goto',
+                                    path: [
+                                        'root',
+                                        'carol-arrives-at-ASC',
+                                        'carol-goes-to-bed',
+                                        'carol-enters-the-bedroom',
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+                {
+                    text: 'watch youtube',
+                    logic: [
+                        {
+                            do: [
+                                {
+                                    type: 'goto',
+                                    path: ['watch-youtube']
+                                },
+                            ],
+                        },
+                    ],
+                },
+                {
                     text: 'respond to the woman',
                     logic: [
                         {
@@ -99,6 +130,39 @@ const onThePlane = make.module({
                                 {
                                     type: 'goto',
                                     path: ['order-a-drink'],
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            id: 'watch-youtube',
+            convo: [
+                {
+                    type: 'text',
+                    text: 'you are dead',
+                },
+                {
+                    type: 'text',
+                    text: `Carol turns off flight mode and starts watching youtube. After a short while an announcement is made"Dear passengers, due to problems with our sensors we have to do an emergency landing"the other passengers begin to panic. "shit" Carol thinks. A few minutes later the plane crashes on the ground. Only the woman, which talked to herself survived`,
+                },
+            ],
+            choices: [
+                {
+                    text: 'restart game',
+                    logic: [
+                        {
+                            do: [
+                                {
+                                type: 'goto',
+                                path: [
+                                    'root',
+                                    'carol-arrives-at-ASC',
+                                    'on-the-plane',
+                                    'opening',
+                                    ],
                                 },
                             ],
                         },
