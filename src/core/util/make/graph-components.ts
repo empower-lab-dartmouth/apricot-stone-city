@@ -94,8 +94,6 @@ function convoSegmentPath(content: _ConvoSegmentPath): ConvoSegmentPath {
 }
 
 function startConvoAction(content: _StartConvoAction): ConvoLogicAction {
-    console.log('testing1')
-    console.log(content)
     return {
         type: 'start-convo-segment',
         path: convoSegmentPath(content.path),

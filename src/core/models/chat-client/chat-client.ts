@@ -11,6 +11,11 @@ export type StorytellerConfig = {
     startingConvoSegmentPath: AbsoluteConvoSegmentPath
 }
 
+type Person = {
+    name: string,
+    age: number
+}
+
 export interface ChatClient {
     runModule: (
         config: StorytellerConfig,
