@@ -225,43 +225,40 @@ const teletubbies = make.module({
             convo: [
                 {
                     type: 'text',
-                    text:
-                        'She follows the light to its source, in the livingroom. In the livivngroom she sees the Teletubbies watching a cursed sun on one of their screens, while singing the Teletubbies-show opening-theme.',
+                    text: 'She follows the light to its source, in the livingroom. In the livivngroom she sees the Teletubbies watching a cursed sun on one of their screens, while singing the Teletubbies-show opening-theme.',
                 },
                 {
                     type: 'image',
-                    src:
-                        'https://user-images.githubusercontent.com/105520369/184104368-ce3db256-d603-481e-800d-659e5c8369cd.png',
+                    src: 'https://user-images.githubusercontent.com/105520369/184104368-ce3db256-d603-481e-800d-659e5c8369cd.png',
                 },
                 {
                     type: 'text',
-                    text:
-                        'Carol gets nearby slowly. Abrupt they turn their heads in Carols direction and ask "DO YOU WANT TO WATCH A MOVIE" with a creepy voice',
+                    text: 'Slowly, carefully, Carol approaches the green Teletubby, who points at a screen embedded in his belly. Three other teletubbys are solely illuminated by the light resonating from the screen. Carol only sees their outlines. Abruptly they stop singing and turn their heads by 180°, directly in Carols direction, asking "DO YOU WANT TO PLAY A GAME?" with a creepy voice',
                 },
             ],
 
             choices: [
                 {
-                    text: 'agree to watch a movie',
+                    text: 'agree to play a game',
                     logic: [
                         {
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['agree-watching'],
+                                    path: ['agree-playing'],
                                 },
                             ],
                         },
                     ],
                 },
                 {
-                    text: 'ask which movie',
+                    text: 'ask which game',
                     logic: [
                         {
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['ask-which-movie'],
+                                    path: ['ask-which-game'],
                                 },
                             ],
                         },
@@ -300,8 +297,7 @@ const teletubbies = make.module({
             convo: [
                 {
                     type: 'text',
-                    text:
-                        'Luckily the vase droped on the fluffy carpet. Now carol can see a flickering light at the end of the hallway.',
+                    text: 'Luckily the Vase dropped on the fluffy carpet. Now carol can see a flickering light at the end of the hallway.',
                 },
             ],
 
@@ -322,69 +318,17 @@ const teletubbies = make.module({
             ],
         },
         {
-            id: 'agree-watching',
+            id: 'agree-playing',
             convo: [
                 {
                     type: 'text',
-                    text:
-                        'Carol agrees to watch a Movie with the Teletubbies. .....................',
+                    text: 'Carol agrees to play a  game with the Teletubbies. "Let us guess a movie you like! If we are wrong, you can leave. But if we are right...", the yellow Teletubby whispers. He points to the screen of the green teletubby. "There is your game," he says,"Go on, we do not...BITE!" As the eerie laughter echoes in Carols ears, she approaches the large green figure and regards the screen.',
                 },
             ],
 
             choices: [
                 {
-                    text: '..................',
-                    logic: [
-                        {
-                            do: [
-                                {
-                                    type: 'goto',
-                                    path: ['ending'],
-                                },
-                            ],
-                        },
-                    ],
-                },
-            ],
-        },
-        {
-            id: 'ask-which-movie',
-            convo: [
-                {
-                    type: 'text',
-                    text:
-                        'Carol asks which movie thy want to watch. "Its your choice", the yellow Teletubbie whispers. .....................................',
-                },
-            ],
-
-            choices: [
-                {
-                    text: '..................',
-                    logic: [
-                        {
-                            do: [
-                                {
-                                    type: 'goto',
-                                    path: ['ending'],
-                                },
-                            ],
-                        },
-                    ],
-                },
-            ],
-        },
-        {
-            id: 'ending',
-            convo: [
-                {
-                    type: 'text',
-                    text: 'end(debugging only)',
-                },
-            ],
-
-            choices: [
-                {
-                    text: 'Carol fall asleep.',
+                    text: 'start playing',
                     logic: [
                         {
                             do: [
@@ -392,9 +336,40 @@ const teletubbies = make.module({
                                     type: 'goto',
                                     path: [
                                         'root',
-                                        'norman-arrives-at-ASC',
-                                        'norman-on-the-plane',
-                                        'introduction',
+                                        'carol-arrives-at-ASC',
+                                        'hot-and-cold-minigame',
+                                        'intro',
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            id: 'ask-which-game',
+            convo: [
+                {
+                    type: 'text',
+                    text:
+                        'Carol asks which game thy want to play. "Let us guess a movie you like! If we are wrong, you can leave. But if we are right...", the yellow Teletubby whispers. He points to the screen of the green teletubby. "There is your game," he says,"Go on, we do not...BITE!" As the eerie laughter echoes in Carols ears, she approaches the large green figure and regards the screen.',
+                },
+            ],
+
+            choices: [
+                {
+                    text: 'start game',
+                    logic: [
+                        {
+                            do: [
+                                {
+                                    type: 'goto',
+                                    path: [
+                                        'root',
+                                        'carol-arrives-at-ASC',
+                                        'hot-and-cold-minigame',
+                                        'intro',
                                     ],
                                 },
                             ],

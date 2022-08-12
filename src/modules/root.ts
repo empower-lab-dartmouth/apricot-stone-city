@@ -62,7 +62,7 @@ const root = make.module({
                                     path: [
                                         'root',
                                         'carol-arrives-at-ASC',
-                                        'hot-and-cold',
+                                        'hot-and-cold-minigame',
                                         'intro',
                                     ],
                                 },

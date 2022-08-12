@@ -9,7 +9,7 @@ import {
 } from './k-nearest-neighbors-movies'
 
 const hotAndCold = make.module({
-    id: 'hot-and-cold',
+    id: 'hot-and-cold-minigame',
     submodules: [],
     convoSegments: [
         {
@@ -124,7 +124,7 @@ const hotAndCold = make.module({
                 {
                     type: 'text',
                     text: state =>
-                        `Type a number between 1 and ${MOVIE_LIBRARY.length}: the answer is ${state.hotAndCold.correctAnswer}`,
+                        `Type a number between 1 and ${MOVIE_LIBRARY.length}:`,
                 },
             ],
             default: [
@@ -233,7 +233,7 @@ const hotAndCold = make.module({
                 {
                     type: 'text',
                     text: state =>
-                        `You got it! The correct answer is ${MOVIE_LIBRARY[state.hotAndCold.correctAnswer - 1].name}. Awesome. You found the answer in ${state.hotAndCold.guessesMade} guesses.\n\n Let's play again?`,
+                        `You got it! Awesome. You found the answer in ${state.hotAndCold.guessesMade} guesses.\n\n Let's play again?`,
                 },
             ],
             choices: [
@@ -410,7 +410,30 @@ const hotAndCold = make.module({
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['root', '/start'],
+                                    path: [
+                                        'root',
+                                        'carol-arrives-at-ASC',
+                                        'algorithm-explaination',
+                                        'Introduction',
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+                {
+                    text: 'quit',
+                    logic: [
+                        {
+                            do: [
+                                {
+                                    type: 'goto',
+                                    path: [
+                                        'root', 
+                                        'norman-arrives-at-ASC', 
+                                        'norman-on-the-plane', 
+                                        'setting'
+                                    ],
                                 },
                             ],
                         },
