@@ -12,7 +12,7 @@ export type StorytellerConfig = {
 }
 
 type Person = {
-    name: string,
+    name: string
     age: number
 }
 

@@ -90,7 +90,7 @@ const onThePlane = make.module({
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['watch-youtube']
+                                    path: ['watch-youtube'],
                                 },
                             ],
                         },
@@ -156,12 +156,12 @@ const onThePlane = make.module({
                         {
                             do: [
                                 {
-                                type: 'goto',
-                                path: [
-                                    'root',
-                                    'carol-arrives-at-ASC',
-                                    'on-the-plane',
-                                    'opening',
+                                    type: 'goto',
+                                    path: [
+                                        'root',
+                                        'carol-arrives-at-ASC',
+                                        'on-the-plane',
+                                        'opening',
                                     ],
                                 },
                             ],

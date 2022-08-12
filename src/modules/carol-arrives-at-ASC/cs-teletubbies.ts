@@ -5,7 +5,7 @@ const teletubbies = make.module({
     submodules: [],
     convoSegments: [
         {
-            id:'carol-wakes-up',
+            id: 'carol-wakes-up',
             convo: [
                 {
                     type: 'text',
@@ -13,7 +13,8 @@ const teletubbies = make.module({
                 },
                 {
                     type: 'text',
-                    text: 'She looks outside the window. Its still dark outside. She tries to sleep again, but in the corner of her eye she detects something weird: the dolls',
+                    text:
+                        'She looks outside the window. Its still dark outside. She tries to sleep again, but in the corner of her eye she detects something weird: the dolls',
                 },
             ],
 
@@ -51,7 +52,8 @@ const teletubbies = make.module({
             convo: [
                 {
                     type: 'image',
-                    src: 'https://user-images.githubusercontent.com/105520369/184097858-ef6efa21-8d54-4203-bd97-132ee31ecf53.png',
+                    src:
+                        'https://user-images.githubusercontent.com/105520369/184097858-ef6efa21-8d54-4203-bd97-132ee31ecf53.png',
                 },
                 {
                     type: 'text',
@@ -61,7 +63,7 @@ const teletubbies = make.module({
 
             choices: [
                 {
-                    text: "go downstairs to find something to eat",
+                    text: 'go downstairs to find something to eat',
                     logic: [
                         {
                             do: [
@@ -93,13 +95,14 @@ const teletubbies = make.module({
             convo: [
                 {
                     type: 'text',
-                    text: 'Carol goes back to the bed and lies down again. She closes her eyes and... *loud noise and child music*. Someone is watching TV or something downstairs',
+                    text:
+                        'Carol goes back to the bed and lies down again. She closes her eyes and... *loud noise and child music*. Someone is watching TV or something downstairs',
                 },
             ],
 
             choices: [
                 {
-                    text: "go downstairs slowly to find out whos there",
+                    text: 'go downstairs slowly to find out whos there',
                     logic: [
                         {
                             do: [
@@ -131,13 +134,14 @@ const teletubbies = make.module({
             convo: [
                 {
                     type: 'text',
-                    text: 'Carol goes down the stairs. She wants to go to the kitchen, but in the hallway she recognizes a flickering light',
+                    text:
+                        'Carol goes down the stairs. She wants to go to the kitchen, but in the hallway she recognizes a flickering light',
                 },
             ],
 
             choices: [
                 {
-                    text: "go to the light source",
+                    text: 'go to the light source',
                     logic: [
                         {
                             do: [
@@ -156,13 +160,14 @@ const teletubbies = make.module({
             convo: [
                 {
                     type: 'text',
-                    text: 'Carol slowly goes to the staircase and sneaks down. In the hallway she recognizes a flickering light',
+                    text:
+                        'Carol slowly goes to the staircase and sneaks down. In the hallway she recognizes a flickering light',
                 },
             ],
 
             choices: [
                 {
-                    text: "go to the light source",
+                    text: 'go to the light source',
                     logic: [
                         {
                             do: [
@@ -181,13 +186,14 @@ const teletubbies = make.module({
             convo: [
                 {
                     type: 'text',
-                    text: 'Carol runs down the stairs. She follows the source of the noises. On her way she crashes into a vase.',
+                    text:
+                        'Carol runs down the stairs. She follows the source of the noises. On her way she crashes into a vase.',
                 },
             ],
 
             choices: [
                 {
-                    text: "catch the vase",
+                    text: 'catch the vase',
                     logic: [
                         {
                             do: [
@@ -200,15 +206,13 @@ const teletubbies = make.module({
                     ],
                 },
                 {
-                    text: "go on",
+                    text: 'go on',
                     logic: [
                         {
                             do: [
-
                                 {
                                     type: 'goto',
                                     path: ['go-on'],
-                                    
                                 },
                             ],
                         },
@@ -221,21 +225,24 @@ const teletubbies = make.module({
             convo: [
                 {
                     type: 'text',
-                    text: 'She follows the light to its source, in the livingroom. In the livivngroom she sees the Teletubbies watching a cursed sun on one of their screens, while singing the Teletubbies-show opening-theme.',
+                    text:
+                        'She follows the light to its source, in the livingroom. In the livivngroom she sees the Teletubbies watching a cursed sun on one of their screens, while singing the Teletubbies-show opening-theme.',
                 },
                 {
                     type: 'image',
-                    src: 'https://user-images.githubusercontent.com/105520369/184104368-ce3db256-d603-481e-800d-659e5c8369cd.png',
+                    src:
+                        'https://user-images.githubusercontent.com/105520369/184104368-ce3db256-d603-481e-800d-659e5c8369cd.png',
                 },
                 {
                     type: 'text',
-                    text: 'Carol gets nearby slowly. Abrupt they turn their heads in Carols direction and ask "DO YOU WANT TO WATCH A MOVIE" with a creepy voice'
+                    text:
+                        'Carol gets nearby slowly. Abrupt they turn their heads in Carols direction and ask "DO YOU WANT TO WATCH A MOVIE" with a creepy voice',
                 },
             ],
 
             choices: [
                 {
-                    text: "agree to watch a movie",
+                    text: 'agree to watch a movie',
                     logic: [
                         {
                             do: [
@@ -248,7 +255,7 @@ const teletubbies = make.module({
                     ],
                 },
                 {
-                    text: "ask which movie",
+                    text: 'ask which movie',
                     logic: [
                         {
                             do: [
@@ -263,17 +270,18 @@ const teletubbies = make.module({
             ],
         },
         {
-        id: 'catch-the-vase',
+            id: 'catch-the-vase',
             convo: [
                 {
                     type: 'text',
-                    text: 'Carol just catches the vase closely before it crashes on the ground. Then She sees a flickering light at the end of the hallway.',
+                    text:
+                        'Carol just catches the vase closely before it crashes on the ground. Then She sees a flickering light at the end of the hallway.',
                 },
             ],
 
             choices: [
                 {
-                    text: "go to the light source",
+                    text: 'go to the light source',
                     logic: [
                         {
                             do: [
@@ -289,16 +297,17 @@ const teletubbies = make.module({
         },
         {
             id: 'go-on',
-                convo: [
-                    {
-                        type: 'text',
-                        text: 'Luckily the vase droped on the fluffy carpet. Now carol can see a flickering light at the end of the hallway.',
-                    },
-                ],
-    
+            convo: [
+                {
+                    type: 'text',
+                    text:
+                        'Luckily the vase droped on the fluffy carpet. Now carol can see a flickering light at the end of the hallway.',
+                },
+            ],
+
             choices: [
                 {
-                    text: "go to the light source",
+                    text: 'go to the light source',
                     logic: [
                         {
                             do: [
@@ -314,16 +323,17 @@ const teletubbies = make.module({
         },
         {
             id: 'agree-watching',
-                convo: [
-                    {
-                        type: 'text',
-                        text: 'Carol agrees to watch a Movie with the Teletubbies. .....................',
-                    },
-                ],
-    
+            convo: [
+                {
+                    type: 'text',
+                    text:
+                        'Carol agrees to watch a Movie with the Teletubbies. .....................',
+                },
+            ],
+
             choices: [
                 {
-                    text: "..................",
+                    text: '..................',
                     logic: [
                         {
                             do: [
@@ -339,16 +349,17 @@ const teletubbies = make.module({
         },
         {
             id: 'ask-which-movie',
-                convo: [
-                    {
-                        type: 'text',
-                        text: 'Carol asks which movie thy want to watch. "Its your choice", the yellow Teletubbie whispers. .....................................',
-                    },
-                ],
-    
+            convo: [
+                {
+                    type: 'text',
+                    text:
+                        'Carol asks which movie thy want to watch. "Its your choice", the yellow Teletubbie whispers. .....................................',
+                },
+            ],
+
             choices: [
                 {
-                    text: "..................",
+                    text: '..................',
                     logic: [
                         {
                             do: [
@@ -364,13 +375,13 @@ const teletubbies = make.module({
         },
         {
             id: 'ending',
-                convo: [
-                    {
-                        type: 'text',
-                        text: 'end(debugging only)',
-                    },
-                ],
-    
+            convo: [
+                {
+                    type: 'text',
+                    text: 'end(debugging only)',
+                },
+            ],
+
             choices: [
                 {
                     text: 'Carol fall asleep.',

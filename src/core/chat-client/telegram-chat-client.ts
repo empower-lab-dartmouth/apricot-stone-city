@@ -17,7 +17,7 @@ function renderWithContext(ctx: TelegrafContext): RenderInChat {
         replyText: (text, buttons) => {
             log.debug('reply in chat with the text message: ', text)
             const keyboard = Keyboard.make(buttons)
-                ctx.replyWithHTML(text, keyboard.reply())
+            ctx.replyWithHTML(text, keyboard.reply())
         },
         replyImage: (src, buttons) => {
             log.debug('reply in chat with the image: ', src)

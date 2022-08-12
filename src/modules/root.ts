@@ -53,14 +53,18 @@ const root = make.module({
                     ],
                 },
                 {
-                    text:
-                        'Minigame',
+                    text: 'Minigame',
                     logic: [
                         {
                             do: [
                                 {
                                     type: 'goto',
-                                    path: ['root', 'carol-arrives-at-ASC', 'hot-and-cold', 'intro'],
+                                    path: [
+                                        'root',
+                                        'carol-arrives-at-ASC',
+                                        'hot-and-cold',
+                                        'intro',
+                                    ],
                                 },
                             ],
                         },

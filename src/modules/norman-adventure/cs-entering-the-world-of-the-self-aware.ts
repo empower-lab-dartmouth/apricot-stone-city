@@ -193,7 +193,7 @@ const enteringWorld = make.module({
                                         'intro-to-ai-general',
                                         'cs.norman-and-the-taxi-driver-intro-to-ai',
                                         'intro-to-ai-introduction',
-                                    ], 
+                                    ],
                                 },
                             ],
                         },

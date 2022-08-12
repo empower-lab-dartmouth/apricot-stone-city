@@ -1,4 +1,4 @@
-import { UserInfo, defaultUserInfo } from '../core/models/state/state';
+import { UserInfo, defaultUserInfo } from '../core/models/state/state'
 
 /*
  * Define your state type and initial user state here. This type and const
@@ -11,17 +11,17 @@ export type State = Required<
         // Add custom state fields here
         testValue: number
         hotAndCold: {
-            guessesMade: number,
-            correctAnswer: number,
+            guessesMade: number
+            correctAnswer: number
         }
     }
 >
 
 export const initialState: State = {
-  ...defaultUserInfo,
-  hotAndCold: {
-    guessesMade: 0,
-    correctAnswer: 1,
-  },
-  testValue: 0,
-};
+    ...defaultUserInfo,
+    hotAndCold: {
+        guessesMade: 0,
+        correctAnswer: 1,
+    },
+    testValue: 0,
+}

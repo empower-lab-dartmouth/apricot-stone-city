@@ -15,8 +15,9 @@ const missingBag = make.module({
                 },
                 {
                     type: 'image',
-                    src: 'https://static7.depositphotos.com/1003587/687/i/600/depositphotos_6875146-stock-photo-luggage.jpg',
-                }
+                    src:
+                        'https://static7.depositphotos.com/1003587/687/i/600/depositphotos_6875146-stock-photo-luggage.jpg',
+                },
             ],
             choices: [
                 {
